@@ -317,6 +317,9 @@ module.exports = {
 				outline: "0 0 0 3px rgba(101, 31, 255, 0.4)",
 			},
 		},
+		backgroundImage: {
+			'hero-bg': "url('/images/hero-bg.png')",
+		}
 	},
 	variants: {
 		scale: ["responsive", "hover", "focus", "group-hover"],

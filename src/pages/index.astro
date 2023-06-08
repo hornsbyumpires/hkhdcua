@@ -1,40 +1,23 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Card from "../components/Card.astro";
+import Hero from "../components/hero.astro";
+import About from "../components/About.astro";
 ---
 
-<MainLayout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br
-			/>
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message
-			above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<MainLayout
+	title="Welcome to Hornsby Ku-ring-gai & Hills District Cricket Umpires Association."
+>
+	<Hero
+		href="/join-with-us"
+		title="Hornsby Ku-ring-gai & Hills District Cricket Umpires Association"
+		subtitle="WELCOME TO"
+		ctaText="Join wit us"
+	/>
+	<About
+		title="Who we are & what we do"
+		subtitle="ABOUT US"
+		body="We are giving away our first UI kit for free. It includes over 130 sections, built with TailwindCSS, for your awesome projects."
+	/>
 </MainLayout>
 
 <style>
