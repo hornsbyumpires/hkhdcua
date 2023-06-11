@@ -1,0 +1,30 @@
+[
+	{
+		"name": "Home",
+		"path": "/"
+	},
+	{
+		"name": "About",
+		"path": "/about-us"
+	},
+	{
+		"name": "Join",
+		"path": "/join-with-us"
+	},
+	{
+		"name": "Resources",
+		"path": "/resources"
+	},
+	{
+		"name": "Learning",
+		"path": "/learning"
+	},
+	{
+		"name": "News & Events",
+		"path": "/news-n-events"
+	},
+	{
+		"name": "Contact",
+		"path": "/contact-us"
+	}
+]

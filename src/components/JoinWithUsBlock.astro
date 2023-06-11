@@ -1,0 +1,88 @@
+---
+export interface Props {
+	para1: string;
+	para2: string;
+	para3: string;
+	title1: string;
+	para4: string;
+	title2: string;
+	para5: string;
+	para6: string;
+	para7: string;
+	para8: string;
+}
+
+const {
+	para1,
+	para2,
+	para3,
+	title1,
+	para4,
+	title2,
+	para5,
+	para6,
+	para7,
+	para8,
+} = Astro.props;
+---
+
+<div
+	class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+>
+	<div class="flex flex-col items-start max-w-screen-sm md:flex-row sm:mx-auto">
+		<a href="/" class="mb-4 mr-8">
+			<div
+				class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-blue-50"
+			>
+				<svg
+					class="w-12 h-12 text-blue-accent-400"
+					stroke="currentColor"
+					viewBox="0 0 52 52"
+				>
+					<polygon
+						stroke-width="3"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						fill="none"
+						points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+				</svg>
+			</div>
+		</a>
+		<div>
+			<p class="text-base text-gray-700 md:text-md mb-2">
+				{para1}
+			</p>
+			<p class="text-base text-gray-700 md:text-md mb-2">
+				{para2}
+			</p>
+			<p class="text-base text-gray-700 md:text-md mb-6">
+				{para3}
+			</p>
+			<h2
+				class="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none"
+			>
+				{title1}
+			</h2>
+			<p class="text-base text-gray-700 md:text-md mb-6">
+				{para4}
+			</p>
+			<h2
+				class="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none"
+			>
+				{title2}
+			</h2>
+			<p class="text-base text-gray-700 md:text-md mb-2">
+				{para5}
+			</p>
+			<p class="text-base text-gray-700 md:text-md mb-2">
+				{para6}
+			</p>
+			<p class="text-base text-gray-700 md:text-md mb-2">
+				{para7}
+			</p>
+			<p class="text-base text-gray-700 md:text-md mb-2">
+				{para8}
+			</p>
+		</div>
+	</div>
+</div>

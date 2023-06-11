@@ -1,4 +1,7 @@
 ---
+
+// components import
+import Link from './Link.astro'
 export interface Props {
 	title: string;
 	subtitle: string;
@@ -6,7 +9,7 @@ export interface Props {
 	ctaText: string;
 }
 
-const { href, title, subtitle, ctaText } = Astro.props;
+const { href, title, subtitle, ctaText } = Astro.props as Props;
 ---
 
 <div class="max-w-full bg-cover bg-hero-bg">
@@ -31,12 +34,7 @@ const { href, title, subtitle, ctaText } = Astro.props;
 						</h1>
 					</div>
 					<div>
-						<a
-							href={href}
-							class="inline-flex items-center justify-center h-12 px-6 font-semibold tracking-wide text-white transition duration-200 rounded shadow-md hover:text-blue-accent-400 bg-blue-accent-400 hover:bg-blue-50 focus:shadow-outline focus:outline-none"
-						>
-							{ctaText}
-						</a>
+						<Link text={ctaText} href={href} style="primary" isFilled={true} />
 					</div>
 				</div>
 			</div>

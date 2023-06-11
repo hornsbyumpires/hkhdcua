@@ -1,21 +1,48 @@
 ---
-export interface Props {
+// component imports
+import Link from "./Link.astro";
+
+interface Props {
 	title: string;
-	body: string;
-	href: string;
+	description: string;
+	date: string;
+	image: {
+		src: string;
+		alt: string;
+	};
+	cta: {
+		text: string;
+		link: string;
+	};
 }
 
-const { href, title, body } = Astro.props;
+const { title, description, date, image, cta } = Astro.props as Props;
 ---
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
+<div class="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm">
+	<a href="/" aria-label="Article">
+		<img
+			src={image.src}
+			class="object-cover w-full h-64 rounded"
+			alt={image.alt}
+		/>
 	</a>
-</li>
+	<div class="p-5">
+		<p class="mb-2 text-xs font-semibold text-gray-600 uppercase">
+			{date}
+		</p>
+		<a
+			href="/"
+			aria-label="Article"
+			class="inline-block mb-3 text-black transition-colors duration-200 hover:text-deep-purple-accent-700"
+		>
+			<p class="text-2xl font-bold leading-5">{title}</p>
+		</a>
+		<p class="mb-4 text-gray-700">
+			{description}
+		</p>
+		<div class="flex space-x-4">
+			<Link text={cta.text} href={cta.link} style="primary" isFilled={true} />
+		</div>
+	</div>
+</div>
