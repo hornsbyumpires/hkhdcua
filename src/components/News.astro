@@ -1,0 +1,68 @@
+---
+// Component import
+import Card from "./Card.astro";
+
+interface News {
+	title: string;
+	description: string;
+	date: string;
+	image: {
+		src: string;
+		alt: string;
+	};
+	cta: {
+		text: string;
+		link: string;
+	};
+}
+
+export interface Props {
+	title: string;
+	subtitle: string;
+	href: string;
+	ctaText: string;
+	news: News[];
+}
+
+const { href, title, subtitle, ctaText, news } = Astro.props;
+---
+
+<div class="bg-blue-50">
+	<div
+		class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+	>
+		<div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+			<div>
+				<p
+					class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-white uppercase rounded-full bg-red-accent-400"
+				>
+					{subtitle}
+				</p>
+			</div>
+			<h2
+				class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto"
+			>
+				{title}
+			</h2>
+		</div>
+		<div
+			class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
+		>
+			<div
+				class="grid gap-5 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full"
+			>
+				{
+					news.map((item: News) => (
+						<Card
+							title={item.title}
+							description={item.description}
+							date={item.date}
+							image={item.image}
+							cta={item.cta}
+						/>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,41 @@
+[
+	{
+		"title": "2023 Winter Umpire Training Program",
+		"description": "Umpire training courses are being confirmed all across the state as NSWCUSA’s winter training program with 10 Laws of Cricket courses scheduled across regional New South Wales and metropolitan Sydney.",
+		"date": "MAY 25, 2023",
+		"image": {
+			"src": "/images/training.png",
+			"alt": ""
+		},
+		"cta" :{
+			"text": "Read more",
+			"link": "/home"
+		}
+	},
+	{
+		"title": "2023 Winter Umpire Training Program",
+		"description": "Umpire training courses are being confirmed all across the state as NSWCUSA’s winter training program with 10 Laws of Cricket courses scheduled across regional New South Wales and metropolitan Sydney.",
+		"date": "MAY 25, 2023",
+		"image": {
+			"src": "/images/news.png",
+			"alt": ""
+		},
+		"cta" :{
+			"text": "Read more",
+			"link": "/home"
+		}
+	},
+	{
+		"title": "2023 Winter Umpire Training Program",
+		"description": "Umpire training courses are being confirmed all across the state as NSWCUSA’s winter training program with 10 Laws of Cricket courses scheduled across regional New South Wales and metropolitan Sydney.",
+		"date": "MAY 25, 2023",
+		"image": {
+			"src": "/images/training.png",
+			"alt": ""
+		},
+		"cta" :{
+			"text": "Read more",
+			"link": "/home"
+		}
+	}
+]

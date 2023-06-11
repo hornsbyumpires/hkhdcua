@@ -1,6 +1,7 @@
 ---
+import navigation from "../data/navigation.json";
 import Footer from "../components/Footer.astro";
-import { Header } from "../components/Header";
+import Header from "../components/Header.astro";
 
 export interface Props {
 	title: string;
@@ -23,31 +24,19 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<Header client:load />
+		<Header navigation={navigation} />
 		<slot />
 		<Footer
 			copy="© Copyright 2020 Hornsby Ku-ring-gai & Hills District Cricket Umpires Association. All rights reserved."
 			hrefFB="/"
-			hrefYoutube="/"
+			privacyPolicy={{
+				text: "Privacy Policy",
+				link: "/privacy-policy",
+			}}
+			faq={{
+				text: "F.A.Q",
+				link: "/faq",
+			}}
 		/>
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			#da62c4 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #f6f6f6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-			DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>

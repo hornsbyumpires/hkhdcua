@@ -1,60 +1,34 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import SecondryHero from "../components/SecondryHero.astro";
+import FactCard from "../components/FactCard.astro";
 ---
 
-<MainLayout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br
+<MainLayout
+	title="Welcome to Hornsby Ku-ring-gai & Hills District Cricket Umpires Association."
+>
+	<SecondryHero
+		title="About Hornsby Ku-ring-gai & Hills District Cricket Umpires Association"
+		subtitle="About HKHDCUA"
+		description="The Association as formed in 1989 and incorporated in 2008 to administer, promote and manage the development of cricket umpires within the Hornsby Ku- Ring- Gai & Hills District Cricket Association."
+		image="/images/about-us.png"
+		link=""
+		linkText=""
+	/>
+	<div
+		class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+	>
+		<div
+			class="grid gap-8 row-gap-5 mb-8 md:row-gap-8 lg:grid-cols-2 sm:grid-cols-2"
+		>
+			<FactCard
+				title="Who we are"
+				description="The Association as formed in 1989 and incorporated in 2008 to administer, promote and manage the development of cricket umpires within the Hornsby Ku- Ring- Gai & Hills District Cricket Association."
 			/>
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message
-			above.
-		</p>
-	</main>
+			<FactCard
+				title="What we do"
+				description="We provide umpires for the Senior, Junior (finals) and Representative Competitions as our primary responsibility. Training courses for Captains, players and managers are offered in addition to continuing education seminars for our umpires."
+			/>
+		</div>
+	</div>
 </MainLayout>
-
-<style lang="scss">
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>

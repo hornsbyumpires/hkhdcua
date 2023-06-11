@@ -1,0 +1,78 @@
+---
+// Library imports
+import { Icon } from "astro-icon";
+
+interface Props {
+	text: string;
+	href: string;
+	style: "primary" | "secondary" | "tertiary";
+	icon?: {
+		name: string;
+		side: "left" | "right";
+	};
+	isFilled?: boolean;
+	isBordered?: boolean;
+	classes?: string;
+}
+
+const {
+	text = "Read more",
+	href = "/",
+	style = "primary",
+	icon,
+	isFilled = false,
+	isBordered = false,
+	classes,
+	...rest
+} = Astro.props as Props;
+---
+
+{
+	isFilled ? (
+		<a
+			href={href}
+			aria-label={text}
+			class:list={[
+				"inline-flex items-center justify-center h-12 px-6 font-semibold tracking-wide text-white transition duration-200 rounded shadow-md hover:text-blue-accent-400 bg-blue-accent-400 hover:bg-white hover:border-1 focus:shadow-outline focus:outline-none",
+				classes,
+				style,
+				{
+					filled: isFilled,
+					bordered: isBordered,
+				},
+			]}
+			{...rest}
+		>
+			{icon && icon.side === "left" && (
+				<Icon name={icon.name} height="24" width="24" />
+			)}
+			<span class="p-2 pt-0 pb-0">{text}</span>
+			{icon && icon.side === "right" && (
+				<Icon name={icon.name} height="24" width="24" />
+			)}
+		</a>
+	) : (
+		<a
+			href={href}
+			aria-label={text}
+			class:list={[
+				"flex flex-row font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-accent-400",
+				classes,
+				style,
+				{
+					filled: isFilled,
+					bordered: isBordered,
+				},
+			]}
+			{...rest}
+		>
+			{icon && icon.side === "left" && (
+				<Icon name={icon.name} height="24" width="24" />
+			)}
+			<span class="p-2 pt-0 pb-0">{text}</span>
+			{icon && icon.side === "right" && (
+				<Icon name={icon.name} height="24" width="24" />
+			)}
+		</a>
+	)
+}
