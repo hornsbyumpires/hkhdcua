@@ -1,0 +1,16 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import PageNotFound from "../components/PageNotFound.astro";
+---
+
+<MainLayout title="Page not found">
+	<PageNotFound
+		title="We lost this page"
+		subtitle="404 error"
+		body="Sorry, the page you are looking for doesn't exist."
+		cta={{
+			text: "Go to Home",
+			link: "/",
+		}}
+	/>
+</MainLayout>

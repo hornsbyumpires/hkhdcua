@@ -2,15 +2,19 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import SecondryHero from "../components/SecondryHero.astro";
 import FactCard from "../components/FactCard.astro";
+import OfficeBearers from "../components/OfficeBearers.astro";
+
+// Data import
+import bearers from "../data/officeBearers.json";
 ---
 
 <MainLayout
 	title="Welcome to Hornsby Ku-ring-gai & Hills District Cricket Umpires Association."
 >
 	<SecondryHero
-		title="About Hornsby Ku-ring-gai & Hills District Cricket Umpires Association"
+		title="A Brief History HKHDCUA"
 		subtitle="About HKHDCUA"
-		description="The Association as formed in 1989 and incorporated in 2008 to administer, promote and manage the development of cricket umpires within the Hornsby Ku- Ring- Gai & Hills District Cricket Association."
+		description="quis tincidunt varius ex varius convallis. Vestibulum elit dignissim, nisi Sed ipsum nisi ex Nunc quis Ut faucibus nibh vitae viverra Morbi diam orci Praesent felis, dolor Nunc facilisis nisl. libero, Donec enim. facilisis lacus malesuada urna. elit hendrerit vitae amet, sit lorem. at non ultrices facilisis ipsum tincidunt amet, Ut In lorem. fringilla elit in vitae viverra sapien felis, vehicula, non amet, ex. faucibus commodo luctus lacus, porta id tincidunt dui elit. non."
 		image="/images/about-us.png"
 		link=""
 		linkText=""
@@ -31,4 +35,9 @@ import FactCard from "../components/FactCard.astro";
 			/>
 		</div>
 	</div>
+	<OfficeBearers
+		title="Current Office Bearers of the HKHDCUA"
+		subtitle="Office Bearers"
+		bearers={bearers}
+	/>
 </MainLayout>

@@ -12,6 +12,10 @@
 		"path": "/join-with-us"
 	},
 	{
+		"name": "Appointments",
+		"path": "/appointments"
+	},
+	{
 		"name": "Resources",
 		"path": "/resources"
 	},

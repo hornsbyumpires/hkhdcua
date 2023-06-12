@@ -9,7 +9,7 @@
 		},
 		"cta" :{
 			"text": "Read more",
-			"link": "/home"
+			"link": "/news-n-events/news-1"
 		}
 	},
 	{
@@ -22,7 +22,7 @@
 		},
 		"cta" :{
 			"text": "Read more",
-			"link": "/home"
+			"link": "/news-n-events/news-2"
 		}
 	},
 	{
@@ -35,7 +35,7 @@
 		},
 		"cta" :{
 			"text": "Read more",
-			"link": "/home"
+			"link": "/news-n-events/news-3"
 		}
 	}
 ]

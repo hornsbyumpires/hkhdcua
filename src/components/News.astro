@@ -19,12 +19,10 @@ interface News {
 export interface Props {
 	title: string;
 	subtitle: string;
-	href: string;
-	ctaText: string;
 	news: News[];
 }
 
-const { href, title, subtitle, ctaText, news } = Astro.props;
+const { title, subtitle, news } = Astro.props;
 ---
 
 <div class="bg-blue-50">
