@@ -1,4 +1,6 @@
 ---
+import { Picture } from "@astrojs/image/components";
+import aboutImg from "../asset/images/about.png";
 // components import
 import Link from "./Link.astro";
 
@@ -22,9 +24,12 @@ const { title, subtitle, body, href, ctaText, imageSrc } = Astro.props;
 			class="flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto"
 		>
 			<div class="relative lg:w-1/2">
-				<img
+				<Picture
 					src={imageSrc}
-					alt=""
+					alt={title}
+					widths={[200, 400, 800]}
+					sizes="(max-width: 800px) 100vw, 800px"
+					aspectRatio="16:9"
 					class="object-cover w-full lg:absolute h-80 lg:h-full"
 				/>
 				<svg

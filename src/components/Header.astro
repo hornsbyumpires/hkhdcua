@@ -1,6 +1,8 @@
 ---
 // Component imports
 import Link from "./Link.astro";
+import { Image } from '@astrojs/image/components';
+import logo from '../asset/images/hkhdcua-logo.png';
 
 interface NavItem {
 	name: string;
@@ -24,7 +26,7 @@ const { navigation = [] } = Astro.props as Props;
 			title="Company"
 			class="inline-flex items-center h-24"
 		>
-			<img class="h-24" src="images/hkhdcua-logo.png" />
+			<Image src={logo} alt="descriptive text" width={108} height={108} aspectRatio="1:1" />
 		</a>
 		<ul class="flex items-center hidden space-x-8 lg:flex">
 			{
