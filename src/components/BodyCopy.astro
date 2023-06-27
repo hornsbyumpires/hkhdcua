@@ -1,0 +1,50 @@
+---
+import Link from "./Link.astro";
+
+interface Props {
+	title: string;
+	bodyCopy: string;
+	link: string;
+	linkText: string;
+}
+
+const { title, bodyCopy, link, linkText } = Astro.props as Props;
+---
+
+<div
+	class="px-4 py-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-8"
+>
+	<div
+		class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-50 lg:w-20 lg:h-20"
+	>
+		<svg
+			class="w-12 h-12 text-blue-accent-400"
+			stroke="currentColor"
+			viewBox="0 0 52 52"
+		>
+			<polygon
+				stroke-width="3"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				fill="none"
+				points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+		</svg>
+	</div>
+	<div class="flex flex-col lg:flex-row">
+		<div class="mb-6 lg:mb-0 lg:w-1/2 lg:pr-5">
+			<h2
+				class="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none"
+			>
+				{title}
+			</h2>
+		</div>
+		<div class="lg:w-1/2">
+			<Fragment set:html={bodyCopy} />
+			{
+				linkText && link && (
+					<Link text={linkText} href={link} style="primary" isFilled={true} />
+				)
+			}
+		</div>
+	</div>
+</div>
