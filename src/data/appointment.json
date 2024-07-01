@@ -1,0 +1,95 @@
+[
+	{
+		"competition": "Senior Mixed A Grade",
+		"appointments": [
+			{
+				"round": "Round 11",
+				"umpires": [
+					{
+						"name": "Ian Lewis"
+					},
+					{
+						"name": "Peter Lee"
+					}
+				],
+				"homeTeam": "Kissing Point",
+				"awayTeam": "Kenthurst Upper Hills",
+				"Venue": "Turramurra Memorial Park"
+			},
+			{
+				"round": "Round 11",
+				"umpires": [
+					{
+						"name": "Geoff Hasler"
+					},
+					{
+						"name": "Tim Davidson"
+					}
+				],
+				"homeTeam": "WPHC Red",
+				"awayTeam": "Berowra White",
+				"Venue": "Parklands Oval (turf-wicket)"
+			},
+			{
+				"round": "Round 11",
+				"umpires": [
+					{
+						"name": "Steve Redman"
+					},
+					{
+						"name": "Jason Fletcher"
+					}
+				],
+				"homeTeam": "Berowra Maroon",
+				"awayTeam": "Hornsby District",
+				"Venue": "Berowra Oval"
+			}
+		]
+	},
+	{
+		"competition": "Senior Mixed A Reserve Grade",
+		"appointments": [
+			{
+				"round": "Round 11 A2",
+				"umpires": [
+					{
+						"name": "Steve Williams"
+					},
+					{
+						"name": "Bruce Wood"
+					}
+				],
+				"homeTeam": "WPHC Blue",
+				"awayTeam": "Asquith Rugby League",
+				"Venue": "Greenway (No. 2)"
+			},
+			{
+				"round": "Round 11 A2",
+				"umpires": [
+					{
+						"name": "Debashish Dash"
+					}
+				],
+				"homeTeam": "GDCC Senior A2 Grade",
+				"awayTeam": "St Ives Wahroonga",
+				"Venue": "The Glade"
+			}
+		]
+	},
+	{
+		"competition": "B Grade",
+		"appointments": [
+			{
+				"round": "Round 11 B",
+				"umpires": [
+					{
+						"name": "Mark Telford"
+					}
+				],
+				"homeTeam": "Sydney Lions",
+				"awayTeam": "Normanhurst-Warrawee",
+				"Venue": "Glenhaven Oval"
+			}
+		]
+	}
+]

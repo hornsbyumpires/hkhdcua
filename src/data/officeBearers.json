@@ -4,24 +4,24 @@
 		"title": "President",
 		"mobile": "0413 611 294",
 		"email": "simonmoore74@gmail.com",
-		"image": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-		"description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora expedita dicta totam aspernatur doloremque. Excepturi iste iusto eos enim reprehenderit nisi, accusamus delectus nihil quis facere in modi ratione libero!"
+		"image": "./src/asset/images/simon.png",
+		"description": ""
 	},
 	{
 		"name": "Geoff Hasler",
 		"title": "Vice-President/ Training",
 		"mobile": "0412 871 816",
 		"email": "geoffhasler70@gmail.com",
-		"image": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-		"description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora expedita dicta totam aspernatur doloremque. Excepturi iste iusto eos enim reprehenderit nisi, accusamus delectus nihil quis facere in modi ratione libero!"
+		"image": "./src/asset/images/geoff.png",
+		"description": ""
 	},
 	{
 		"name": "Steve Redman",
 		"title": "Secretary",
 		"mobile": "0416 007 005",
 		"email": "steve@newmail.com.au",
-		"image": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-		"description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora expedita dicta totam aspernatur doloremque. Excepturi iste iusto eos enim reprehenderit nisi, accusamus delectus nihil quis facere in modi ratione libero!"
+		"image": "./src/asset/images/steve.png",
+		"description": ""
 	},
 	{
 		"name": "Tim Davidson",
@@ -29,7 +29,7 @@
 		"mobile": "0412 315 403",
 		"email": "tim@davidsonaa.com.au",
 		"image": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-		"description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora expedita dicta totam aspernatur doloremque. Excepturi iste iusto eos enim reprehenderit nisi, accusamus delectus nihil quis facere in modi ratione libero!"
+		"description": ""
 	},
 	{
 		"name": "Jason Fletcher",
@@ -37,6 +37,6 @@
 		"mobile": "0478 811 464",
 		"email": "jf570mon@hotmail.com",
 		"image": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-		"description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora expedita dicta totam aspernatur doloremque. Excepturi iste iusto eos enim reprehenderit nisi, accusamus delectus nihil quis facere in modi ratione libero!"
+		"description": ""
 	}
 ]

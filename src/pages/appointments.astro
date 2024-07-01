@@ -1,18 +1,59 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import SecondryHero from "../components/SecondryHero.astro";
-import FactCard from "../components/FactCard.astro";
+import Appointment from "../components/Appointment.astro";
+
+const sheetID = "1q_lDVdaf7BKAXkazBHTih-NT6aQ_WLTUSZxhHQ8Mu1k";
+const baseURL = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
+const sheetName = "appointment";
+const query = encodeURIComponent("Select *");
+const url = `${baseURL}&sheet=${sheetName}&tq=${query}`;
+const response = await fetch(url);
+const data = await response.text();
+const appointments = JSON.parse(data.substring(47).slice(0, -2));
+
+function removeNull(obj: Record<string, any>): Record<string, any> {
+	return Object.fromEntries(
+		Object.entries(obj)
+			.filter(([_, value]) => value !== null)
+			.map(([key, value]) => [
+				key,
+				value === Object(value) ? removeNull(value) : value,
+			])
+	);
+}
+
+function removeEmptyObjects(obj: Record<string, any>): Record<string, any> {
+	return Object.fromEntries(
+		Object.entries(obj)
+			.filter(([_, value]) => Object.keys(value).length !== 0)
+			.map(([key, value]) => [
+				key,
+				value === Object(value) ? removeNull(value) : value,
+			])
+	);
+}
+
+const withoutNullAppointments = removeNull(appointments?.table?.rows);
+const withoutEmptyObjectsAppointments = removeEmptyObjects(withoutNullAppointments);
+
 ---
 
 <MainLayout
 	title="Welcome to Hornsby Ku-ring-gai & Hills District Cricket Umpires Association."
 >
 	<SecondryHero
-		title="Upcoming appointments"
-		subtitle="appointments"
-		description=""
-		image="/images/appointments.jpg"
+		title="Appointments"
+		subtitle="Umpire appointments"
+		description="The Association as formed in 1989 and incorporated in 2008 to administer, promote and manage the development of cricket umpires within the Hornsby Ku- Ring- Gai & Hills District Cricket Association."
+		image="./src/asset/images/appointments.png"
 		link=""
 		linkText=""
+	/>
+	<Appointment
+		title="Upcoming appointments for 23/24 session"
+		subtitle="Appointments"
+		bodyCopy="Here is the roster of scheduled officiating assignments for upcoming matches."
+		appointments={withoutEmptyObjectsAppointments}
 	/>
 </MainLayout>

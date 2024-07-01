@@ -318,7 +318,7 @@ module.exports = {
 			},
 		},
 		backgroundImage: {
-			'hero-bg': "url('/images/hero-bg.png')",
+			'hero-bg': "url('./src/asset/images/hero-bg.png')",
 		}
 	},
 	variants: {

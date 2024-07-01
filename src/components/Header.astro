@@ -1,8 +1,8 @@
 ---
 // Component imports
 import Link from "./Link.astro";
-import { Image } from '@astrojs/image/components';
-import logo from '../asset/images/hkhdcua-logo.png';
+import { Image } from "@astrojs/image/components";
+import logo from "../asset/images/hkhdcua-logo.png";
 
 interface NavItem {
 	name: string;
@@ -17,16 +17,22 @@ const { navigation = [] } = Astro.props as Props;
 ---
 
 <div
-	class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
+	class="mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-8"
 >
 	<div class="relative flex items-center justify-between">
 		<a
 			href="/"
 			aria-label="Company"
 			title="Company"
-			class="inline-flex items-center h-24"
+			class="inline-flex items-center h-24 m-5 md:mr-0 md:ml-0"
 		>
-			<Image src={logo} alt="descriptive text" width={108} height={108} aspectRatio="1:1" />
+			<Image
+				src={logo}
+				alt="descriptive text"
+				width={108}
+				height={108}
+				aspectRatio="1:1"
+			/>
 		</a>
 		<ul class="flex items-center hidden space-x-8 lg:flex">
 			{
@@ -46,7 +52,7 @@ const { navigation = [] } = Astro.props as Props;
 			<button
 				aria-label="Open Menu"
 				title="Open Menu"
-				class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-blue-50 focus:bg-blue-50"
+				class="p-2 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-blue-50 focus:bg-blue-50 m-5 md:mr-0 md:ml-0"
 				id="hamburger-menu-open-btn"
 			>
 				<svg class="w-5 text-gray-600" viewBox="0 0 24 24">
@@ -74,7 +80,13 @@ const { navigation = [] } = Astro.props as Props;
 								title="Company"
 								class="inline-flex items-center h-24"
 							>
-								<img class="h-24" src="images/hkhdcua-logo.png" />
+								<Image
+									src={logo}
+									alt="descriptive text"
+									width={108}
+									height={108}
+									aspectRatio="1:1"
+								/>
 							</a>
 						</div>
 						<div>
@@ -111,5 +123,5 @@ const { navigation = [] } = Astro.props as Props;
 </div>
 
 <script>
-	import "../scripts/menu.js"
+	import "../scripts/menu.js";
 </script>

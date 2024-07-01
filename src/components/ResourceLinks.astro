@@ -1,0 +1,54 @@
+---
+import { Picture } from "@astrojs/image/components";
+
+export interface Props {
+	title: string;
+	resorces: Array<{
+		title: string;
+		image: string;
+		body: string;
+		link: string;
+	}>;
+}
+
+const { title, resorces } = Astro.props as Props;
+---
+
+<div
+	class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+>
+	<div class="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
+		<h2
+			class="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group"
+		>
+			{title}
+		</h2>
+	</div>
+	<div
+		class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-6 sm:grid-cols-1"
+	>
+		{
+			resorces.map((resorce) => (
+				<a href={resorce.link} aria-label={resorce.title}>
+					<div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+						<Picture
+							src={resorce.image}
+							alt={resorce.title}
+							widths={[200, 400, 800]}
+							sizes="(max-width: 800px) 100vw, 800px"
+							aspectRatio="1:1"
+						/>
+						<div class="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
+							<h3 class="text-lg font-semibold tracking-wide text-white mb-2">
+								{resorce.title}
+							</h3>
+							<p class="text-xs font-medium tracking-wide text-white">
+								{resorce.body}
+							</p>
+						</div>
+					</div>
+				</a>
+			))
+		}
+	</div>
+</div>

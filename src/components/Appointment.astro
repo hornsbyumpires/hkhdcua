@@ -1,0 +1,88 @@
+---
+export interface Props {
+	title: string;
+	subtitle: string;
+	bodyCopy: string;
+	appointments: Record<string, any>;
+}
+
+const { title, subtitle, bodyCopy, appointments } = Astro.props as Props;
+---
+
+<div
+	class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+>
+	<div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+		<div>
+			<p
+				class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-white uppercase rounded-full bg-red-accent-400"
+			>
+				{subtitle}
+			</p>
+		</div>
+		<h2
+			class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto"
+		>
+			{title}
+		</h2>
+		<p class="text-base text-gray-700 md:text-lg">
+			{bodyCopy}
+		</p>
+	</div>
+	<div class="grid gap-4 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
+		{
+			Object.values(appointments).map(
+				(appointment, index) =>
+					index !== 0 && (
+						<div class="flex flex-col justify-between p-5 border rounded shadow-sm">
+							<div>
+								<div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
+									<svg
+										class="w-12 h-12 text-blue-accent-400"
+										stroke="currentColor"
+										viewBox="0 0 52 52"
+									>
+										<polygon
+											stroke-width="3"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											fill="none"
+											points="29 13 14 29 25 29 23 39 38 23 27 23"
+										/>
+									</svg>
+								</div>
+								<p class="mb-2 font-semibold leading-5 flex flex-row gap-1 justify-start items-center">
+									<span class="text-xs text-gray-800">Competition:</span>
+									<span class="text-sm">{Object.values(appointment["c"])[0]?.v}</span>
+								</p>
+								<p class="mb-2 font-semibold leading-5 flex flex-row gap-1 justify-start items-center">
+									<span class="text-xs text-gray-800">Round:</span>
+									<span class="text-sm">{Object.values(appointment["c"])[1]?.v}</span>
+								</p>
+								<p class="mb-2 font-semibold leading-5 flex flex-row gap-1 justify-start items-center">
+									<span class="text-xs text-gray-800">Umpire 1:</span>
+									<span class="text-sm">{Object.values(appointment["c"])[2]?.v}</span>
+								</p>
+								<p class="mb-2 font-semibold leading-5 flex flex-row gap-1 justify-start items-center">
+									<span class="text-xs text-gray-800">Umpire 2:</span>
+									<span class="text-sm">{Object.values(appointment["c"])[3]?.v}</span>
+								</p>
+								<p class="mb-2 font-semibold leading-5 flex flex-row gap-1 justify-start items-center">
+									<span class="text-xs text-gray-800">Home Team:</span>
+									<span class="text-sm">{Object.values(appointment["c"])[4]?.v}</span>
+								</p>
+								<p class="mb-2 font-semibold leading-5 flex flex-row gap-1 justify-start items-center">
+									<span class="text-xs text-gray-800">Away Team:</span>
+									<span class="text-sm">{Object.values(appointment["c"])[5]?.v}</span>
+								</p>
+								<p class="mb-2 font-semibold leading-5 flex flex-row gap-1 justify-start items-center">
+									<span class="text-xs text-gray-800">Venue:</span>
+									<span class="text-sm">{Object.values(appointment["c"])[6]?.v}</span>
+								</p>
+							</div>
+						</div>
+					)
+			)
+		}
+	</div>
+</div>
