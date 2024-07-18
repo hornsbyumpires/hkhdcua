@@ -3,6 +3,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 import SecondryHero from "../components/SecondryHero.astro";
 import FactCard from "../components/FactCard.astro";
 import OfficeBearers from "../components/OfficeBearers.astro";
+import Paragraph from "../components/Paragraph.astro";
+import History from "../components/History.astro";
 
 // Data import
 import bearers from "../data/officeBearers.json";
@@ -23,7 +25,7 @@ import bearers from "../data/officeBearers.json";
 		class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
 	>
 		<div
-			class="grid gap-8 row-gap-5 mb-8 md:row-gap-8 lg:grid-cols-2 sm:grid-cols-2"
+			class="grid gap-8 row-gap-5 md:row-gap-8 lg:grid-cols-2 sm:grid-cols-2"
 		>
 			<FactCard
 				title="Who we are"
@@ -35,9 +37,23 @@ import bearers from "../data/officeBearers.json";
 			/>
 		</div>
 	</div>
+	<div class="bg-blue-50">
+		<Paragraph
+			title="THE HORNSBY KU-RING-GAI& HILLS DISTRICT CRICKET UMPIRES ASSOCIATION "
+			bodyCopy="<p class='text-base text-gray-700 mb-2'>The HKHDCUA has been in operation, in a formal sense, since 1989, however, a small group of umpires officiated in the Hornsby Ku-Ring-Gai & Hills District Cricket Association Senior Competition for many seasons prior to that time.</p><p class='text-base text-gray-700 mb-2'>Incorporated n 2008, our Association is affiliated with the NSW Cricket Umpires and Scorers Association and provides umpires for the NSW Youth Championship fixtures across the Sydney Region, Central Coast and Newcastle.</p><p class='text-base text-gray-700 mb-2'>In addition to Senior matches, the Association also provides umpires for the Junior Semi and Grand Finals and other junior development fixtures.</p><p class='text-base text-gray-700 mb-2'>Our umpires officiate in an area from St Ives in the south to Berowra in the north and Kenthurst to the west.</p><p class='text-base text-gray-700 mb-2'>We conduct Training Seminars for players in the Senior Competition, focusing upon the MCC Laws, Local Playing Conditions, and, importantly, the Responsibilities of a Captain.</p><p class='text-base text-gray-700 mb-2'>These programs have a long history of success in up skilling the captains and senior players in acting efficiently as player umpires in the lower grades within the HKHDCA Senior Competition and improving the respect for the Spirit of the Game.</p><p class='text-base text-gray-700 mb-2'>We also offer our umpires a pre-season Seminar in which we focus upon changes in the MCC or Local Playing Conditions and a specific topic within the development of umpire’s field craft and communication.</p><p class='text-base text-gray-700 mb-2'>The Association has built an excellent reputation within the cricket community that it serves and includes members of all ages and backgrounds, a totally inclusive group of dedicated cricket lovers.</p></br>"
+		/>
+	</div>
 	<OfficeBearers
 		title="Current Office Bearers of the HKHDCUA"
 		subtitle="Office Bearers"
 		bearers={bearers}
+	/>
+	<History
+		title="A Brief History HKHDCUA"
+		subtitle="History of HKHDCUA"
+		body="The Association as formed in 1989 and incorporated in 2008 to administer, promote and manage the development of cricket umpires within the Hornsby Ku- Ring- Gai & Hills District Cricket Association."
+		image="./src/asset/images/history.jpg"
+		link="/about-us/history"
+		linkText="Learn more"
 	/>
 </MainLayout>
