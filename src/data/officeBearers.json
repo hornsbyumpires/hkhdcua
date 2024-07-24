@@ -1,10 +1,10 @@
 [
 	{
-		"name": "Simon Moore",
+		"name": "Ian Lewis",
 		"title": "President",
-		"mobile": "0413 611 294",
-		"email": "simonmoore74@gmail.com",
-		"image": "./src/asset/images/simon.png",
+		"mobile": "0421 452 442",
+		"email": "",
+		"image": "./src/asset/images/ian.png",
 		"description": ""
 	},
 	{
@@ -16,15 +16,15 @@
 		"description": ""
 	},
 	{
-		"name": "Steve Redman",
+		"name": "Simon Moore",
 		"title": "Secretary",
-		"mobile": "0416 007 005",
-		"email": "steve@newmail.com.au",
-		"image": "./src/asset/images/steve.png",
+		"mobile": "0413 611 294",
+		"email": "simonmoore74@gmail.com",
+		"image": "./src/asset/images/simon.png",
 		"description": ""
 	},
 	{
-		"name": "Tim Davidson",
+		"name": "Matt Heddo",
 		"title": "Treasurer",
 		"mobile": "0412 315 403",
 		"email": "tim@davidsonaa.com.au",
