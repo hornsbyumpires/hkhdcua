@@ -31,6 +31,8 @@ const {
 	sponsorSecondry,
 	sponsorTertiary,
 } = Astro.props as Props;
+import { Picture } from "@astrojs/image/components";
+
 ---
 
 <div
@@ -173,24 +175,30 @@ const {
 		</div>
 		<div class="grid grid-cols-2 gap-5">
 			<a class="p-5 col-span-2 rounded shadow-lg bg-blue-900 flex flex-col justify-center" href={sponsorPrimary.link} target="_self">
-				<img
-					class="object-cover w-full"
+				<Picture
 					src={sponsorPrimary.image}
 					alt={sponsorPrimary.title}
+					widths={[200, 400, 800]}
+					sizes="(max-width: 800px) 100vw, 800px"
+					aspectRatio="16:9"
 				/>
 			</a>
 			<a class="rounded shadow-lg p-5 bg-white flex flex-col justify-center" href={sponsorSecondry.link} target="_self">
-				<img
-					class="object-cover w-full"
+				<Picture
 					src={sponsorSecondry.image}
 					alt={sponsorSecondry.title}
+					widths={[200, 400, 800]}
+					sizes="(max-width: 800px) 100vw, 800px"
+					aspectRatio="3:2"
 				/>
 			</a>
 			<a class="rounded shadow-lg p-5 bg-white flex flex-col justify-center" href={sponsorTertiary.link} target="_self">
-				<img
-					class="object-cover w-full"
+				<Picture
 					src={sponsorTertiary.image}
 					alt={sponsorTertiary.title}
+					widths={[200, 400, 800]}
+					sizes="(max-width: 800px) 100vw, 800px"
+					aspectRatio="3:2"
 				/>
 			</a>
 		</div>
