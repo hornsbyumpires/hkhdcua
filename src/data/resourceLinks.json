@@ -1,19 +1,19 @@
 [
 	{
 		"title": "MCC laws of cricket",
-		"image": "/images/mcc-laws-book.jpg",
+		"image": "./src/asset/images/mcc-laws.jpg",
 		"body": "Umpire training courses are being confirmed all across the state as NSWCUSA’s winter",
 		"link": "/news-n-events/mcc-laws"
 	},
 	{
 		"title": "HKHDCA local playing conditions",
-		"image": "/images/local-playing-condition.jpg",
+		"image": "./src/asset/images/training.png",
 		"body": "Umpire training courses are being confirmed all across the state as NSWCUSA’s winter.",
 		"link": "/news-n-events/local-playing-conditions"
 	},
 	{
 		"title": "MCC laws of cricket animation Series",
-		"image": "/images/mcc-laws-animation.jpg",
+		"image": "./src/asset/images/mcc-laws.jpg",
 		"body": "Umpire training courses are being confirmed all across the state as NSWCUSA’s winter.",
 		"link": "/news-n-events/mcc-laws-animation-series"
 	}
