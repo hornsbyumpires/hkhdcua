@@ -1,15 +1,15 @@
 [
 	{
-		"title": "2023 Winter Umpire Training Program",
-		"description": "Umpire training courses are being confirmed all across the state as NSWCUSA’s winter training program with 10 Laws of Cricket courses scheduled across regional New South Wales and metropolitan Sydney.",
-		"date": "MAY 25, 2023",
+		"title": "A Grade Grand Final Report 23/24",
+		"description": "The A Grade Grand Final was played between Berowra Maroon and Berowra White at Berowra Oval on March 16 and 17, 2024",
+		"date": "April 25, 2024",
 		"image": {
 			"src": "./src/asset/images/news-umpire.jpg",
 			"alt": ""
 		},
 		"cta" :{
 			"text": "Read more",
-			"link": "/news-n-events/news-1"
+			"link": "/news/final-report-23-24"
 		}
 	},
 	{
@@ -22,20 +22,20 @@
 		},
 		"cta" :{
 			"text": "Read more",
-			"link": "/news-n-events/news-2"
+			"link": "/news/simon-moore-recognised"
 		}
 	},
 	{
-		"title": "2023 Winter Umpire Training Program",
-		"description": "Umpire training courses are being confirmed all across the state as NSWCUSA’s winter training program with 10 Laws of Cricket courses scheduled across regional New South Wales and metropolitan Sydney.",
-		"date": "MAY 25, 2023",
+		"title": "Umpires Appointed to Finals 23/24",
+		"description": "The 2023/24 finals witnessed a stellar lineup of umpires. Seasoned veterans, renowned for their precision and composure, shared the field with rising stars demonstrating exceptional talent.",
+		"date": "MAY 25, 2024",
 		"image": {
 			"src": "./src/asset/images/news-umpire.jpg",
 			"alt": ""
 		},
 		"cta" :{
 			"text": "Read more",
-			"link": "/news-n-events/news-3"
+			"link": "/news/umpires-appointed"
 		}
 	}
 ]

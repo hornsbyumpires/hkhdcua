@@ -28,7 +28,7 @@
 		"title": "Treasurer",
 		"mobile": "0412 315 403",
 		"email": "matthew.heddo@gmail.com",
-		"image": "./src/asset/images/avator.png",
+		"image": "./src/asset/images/avator.jpg",
 		"description": ""
 	},
 	{
@@ -44,7 +44,7 @@
 		"title": "Sponsorship & Social Co-ordinator",
 		"mobile": "",
 		"email": "zhan.luo@education.nsw.gov.au",
-		"image": "./src/asset/images/avator.png",
+		"image": "./src/asset/images/avator.jpg",
 		"description": ""
 	},
 	{
@@ -52,7 +52,7 @@
 		"title": "Examination committee",
 		"mobile": "",
 		"email": "zachary.fogerty@gmail.com",
-		"image": "./src/asset/images/avator.png",
+		"image": "./src/asset/images/avator.jpg",
 		"description": ""
 	},
 	{
@@ -68,7 +68,7 @@
 		"title": "Delegate to NSWCUSA",
 		"mobile": "0414 919 724",
 		"email": "jamesffernandez1@gmail.com",
-		"image": "./src/asset/images/avator.png",
+		"image": "./src/asset/images/avator.jpg",
 		"description": ""
 	}
 ]
