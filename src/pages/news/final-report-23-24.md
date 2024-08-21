@@ -11,7 +11,7 @@ description: 'Simon Moore recognised by NSWCUSA'
 	<div class="grid gap-10 lg:grid-cols-2">
 		<div class="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
 			<div
-				class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-red-accent-400"
+				class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-blue-accent-400"
 			>
 				<svg class="text-white w-7 h-7" viewBox="0 0 24 24">
 					<polyline
@@ -55,34 +55,41 @@ description: 'Simon Moore recognised by NSWCUSA'
 				<h2
 					class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none"
 				>
-					Simon Moore recognised by NSWCUSA
+					A Grade Grand Final Report 23/24 session
 				</h2>
-				<p class="text-base text-gray-700 mb-4">Simon joined NSWCUSA in 1992 and was upgraded to Full Membership in 1993.</p>
-				<p class="text-base text-gray-700 mb-4">A stalwart of the Hornsby Ku-ring-gai and Hills District Cricket Umpires’ Association, Simon is truly deserving of Principal membership of the Association.</p>
-				<p class="text-base text-gray-700 mb-4">During his time with the NSWCUSA Simon has officiated 483 matches across the HKHDCA competition, the DCA and the IDCA President’s Cup Competitions. A match official of the highest quality, Simon has been appointed to the A Grade final 10 times and has been awarded umpire of the year on four occasions. Along with these accolades Simon in recent seasons has dedicated his time to mentoring new umpires and assisting with their initial time in the middle.</p>
-				<p class="text-base text-gray-700 mb-4">Off field Simon has served the HKHDCUA executive for 14 seasons in various capacities, these include Assistant Secretary, Secretary and President.</p>
-				<p class="text-base text-gray-700 mb-4">Simon has also assisted in the delivery of training courses for captains to provide them with an understanding of Laws and local playing conditions.</p>
-				<p class="text-base text-gray-700 mb-4">In 2017 he was bestowed with Life Membership of the HKHDCUA.</p>
-				<p class="text-base text-gray-700 mb-4">A highly respected person in the Hornsby Ku-ring-gai and Hills cricket community, we congratulate Simon on his upgrade to Principal membership of NSWCUSA.</p>
+				<p class="text-base text-gray-700 mb-4">The A Grade Grand Final was played between Berowra Maroon and Berowra White at Berowra Oval on 16th and 17th March, 2024, Umpires are Geoff Hasler & Simon Moore</p>
+				<p class="text-base text-gray-700 mb-4">The A Grade Grand Final was played between minor premiers, Berowra White and the runners up, Berowra Maroon. The Maroon captain, Will Fiedler won the toss and sent the White team in to bat.</p>
+				<p class="text-base text-gray-700 mb-4">They were immediately in trouble with wickets falling at regular intervals. 1 for 5, 2 for 9, then 3 for 11, against sustained accurate and fast bowling from Brody Collier</p>
+				<p class="text-base text-gray-700 mb-4">A partnership between Mason Francis and Mark Tobin put on 34 runs before Tobin was out for 13. Brody Collier then took two quick wickets, both LBW, to have the White side 6 for 46.</p>
+				<p class="text-base text-gray-700 mb-4">Liahm Williams took the attack to the Maroon side and scored a fine 21 in a 24 run partnership with Mason Francis, before being unfortunately run out, slipping when attempting to turn.</p>
+				<p class="text-base text-gray-700 mb-4">Once the 7 th wicket fell at 70, the remaining wickets didn’t last long and the White side was all out for 84 off 54.4 overs. Mason Francis opened the innings and carried his bat to remain 29 not out off 160 balls.</P>
+				<p class="text-base text-gray-700 mb-4">The star for the Maroon side was Brody Collier, who was almost unplayable with his movement, line and length. He finished with the fine figures of 6 wickets for 16 runs off 14.4 overs, including 6 maidens. He was well supported by Cooper Davenport with 2 for 17 off 14 overs.</p>
+				<p class="text-base text-gray-700 mb-4">With the possibility of rain on the second day, the Maroons had a minimum of 31 overs to try and achieve a result on the first day of play.</p>
+				<p class="text-base text-gray-700 mb-4">They started slowly with Scott Griffin and Richard Johnson putting on 21 before several wickets slowed their momentum and they were soon 4 for 46.</p>
+				<p class="text-base text-gray-700 mb-4">Mitch Fullagar then changed the game with 30 runs off just 12 deliveries, hitting 3 sixes. When Fullagar was dismissed, the score was 5 for 82 and at stumps on day 1, the Maroon side had reached a slender lead of 8 runs.</p>
+				<p class="text-base text-gray-700 mb-4">The day 2 start was slightly delayed due to overnight rain leaving a very wet area on the edge of the square, however, with the commitment of the groundsman and assistance from the players of both teams, play commenced 10 minutes late, with a small reduction in overs for the day.</p>
+				<p class="text-base text-gray-700 mb-4">Not out overnight, Will Fiedler scored 24, backed up by Callum Birrel, 17, and Brody Collier, showing he wasn’t just a bowler, scoring 17 not out and putting on an unbeaten 28 runs for the last wicket. Young gun Hamilton Seoung, who batted #4 was not out 41 off 226 deliveries. Hamilton’s concentration was outstanding with barely a false shot played.</p>
+				<p class="text-base text-gray-700 mb-4">The White Team Captain, Andam West conceded at the second drinks break with the Maroon side 9 for 176. Joe Robinson took 4 for 37 off 22 overs, supported by Nicholas McMillan with 2 for 11 off 8 overs and Mark Tobin with 2 for 23 off 11.</p>
+				<p class="text-base text-gray-700 mb-4">A fine win to the Berowra Maroon side, well led by Will Fiedler.Undoubtedly, the man of the match was Brody Collier. The Berowra White side is a young side and will be improved by the experience.</p>
 			</div>
 		</div>
 		<div class="flex items-center justify-center -mx-4 lg:pl-8">
 			<div class="flex flex-col items-end px-3">
 				<img
 					class="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
-					src="../../src/asset/images/simon.png"
+					src="../../src/asset/images/a-grade-final.jpg"
 					alt=""
 				/>
 				<img
 					class="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40"
-					src="../../src/asset/images/simon.jpg"
+					src="../../src/asset/images/a-grade-report.jpg"
 					alt=""
 				/>
 			</div>
 			<div class="px-3">
 				<img
 					class="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80"
-					src="../../src/asset/images/news-umpire.jpg"
+					src="../../src/asset/images/wining-team.jpg"
 					alt=""
 				/>
 			</div>

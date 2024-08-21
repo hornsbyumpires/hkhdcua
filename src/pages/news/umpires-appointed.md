@@ -11,7 +11,7 @@ description: 'Simon Moore recognised by NSWCUSA'
 	<div class="grid gap-10 lg:grid-cols-2">
 		<div class="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
 			<div
-				class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-red-accent-400"
+				class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-blue-accent-400"
 			>
 				<svg class="text-white w-7 h-7" viewBox="0 0 24 24">
 					<polyline
@@ -55,7 +55,7 @@ description: 'Simon Moore recognised by NSWCUSA'
 				<h2
 					class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none"
 				>
-					Simon Moore recognised by NSWCUSA
+					Umpires Appointed to Finals 23/24 session
 				</h2>
 				<p class="text-base text-gray-700 mb-4">Simon joined NSWCUSA in 1992 and was upgraded to Full Membership in 1993.</p>
 				<p class="text-base text-gray-700 mb-4">A stalwart of the Hornsby Ku-ring-gai and Hills District Cricket Umpires’ Association, Simon is truly deserving of Principal membership of the Association.</p>
@@ -70,19 +70,19 @@ description: 'Simon Moore recognised by NSWCUSA'
 			<div class="flex flex-col items-end px-3">
 				<img
 					class="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
-					src="../../src/asset/images/simon.png"
+					src="../../src/asset/images/news-umpire.jpg"
 					alt=""
 				/>
 				<img
 					class="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40"
-					src="../../src/asset/images/simon.jpg"
+					src="../../src/asset/images/umpires-2.jpg"
 					alt=""
 				/>
 			</div>
 			<div class="px-3">
 				<img
 					class="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80"
-					src="../../src/asset/images/news-umpire.jpg"
+					src="../../src/asset/images/umpires.jpg"
 					alt=""
 				/>
 			</div>

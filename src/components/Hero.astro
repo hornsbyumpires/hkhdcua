@@ -15,15 +15,15 @@ const { href, title, subtitle, ctaText } = Astro.props as Props;
 
 <div class="relative">
 	<Picture
-		src={"./src/asset/images/hero-bg.jpg"}
-		alt={"sponsorTertiary.title"}
+		src={"./src/asset/images/bg-img.jpg"}
+		alt={title}
 		widths={[1728]}
 		sizes="(max-width: 1728px) 100vw, 1728px"
 		aspectRatio="2:1"
 		class={'absolute inset-0 object-cover w-full h-full'}
 	/>
-	<div class="relative bg-blue-accent-100 bg-opacity-75">
-		<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+	<div class="relative bg-blue-accent-200 bg-opacity-80">
+		<div class="px-4 py-24 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-32">
 			<div class="max-w-xl sm:mx-auto lg:max-w-2xl">
 				<div class="flex flex-col mb-16 sm:text-center sm:mb-0">
 					<div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">

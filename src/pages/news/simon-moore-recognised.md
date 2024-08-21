@@ -11,7 +11,7 @@ description: 'Simon Moore recognised by NSWCUSA'
 	<div class="grid gap-10 lg:grid-cols-2">
 		<div class="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
 			<div
-				class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-red-accent-400"
+				class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-blue-accent-400"
 			>
 				<svg class="text-white w-7 h-7" viewBox="0 0 24 24">
 					<polyline
@@ -82,7 +82,7 @@ description: 'Simon Moore recognised by NSWCUSA'
 			<div class="px-3">
 				<img
 					class="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80"
-					src="../../src/asset/images/news-umpire.jpg"
+					src="../../src/asset/images/simon-recognised.jpg"
 					alt=""
 				/>
 			</div>
