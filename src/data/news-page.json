@@ -1,0 +1,41 @@
+[
+	{
+		"title": "A Grade Grand Final Report 23/24",
+		"description": "The A Grade Grand Final was played between Berowra Maroon and Berowra White at Berowra Oval on March 16 and 17, 2024",
+		"date": "April 25, 2024",
+		"image": {
+			"src": "./src/asset/images/a-grade-final.jpg",
+			"alt": ""
+		},
+		"cta" :{
+			"text": "Read more",
+			"link": "/news/final-report-23-24"
+		}
+	},
+	{
+		"title": "Simon Moore recognised by NSWCUSA",
+		"description": "Simon joined NSWCUSA in 1992 and was upgraded to Full Membership in 1993. A stalwart of the Hornsby Ku-ring-gai and Hills District Cricket Umpires’ Association, Simon is truly deserving of Principal membership of the Association.",
+		"date": "MAY 25, 2023",
+		"image": {
+			"src": "./src/asset/images/simon-news.jpg",
+			"alt": ""
+		},
+		"cta" :{
+			"text": "Read more",
+			"link": "/news/simon-moore-recognised"
+		}
+	},
+	{
+		"title": "Umpires Appointed to Finals 23/24",
+		"description": "The 2023/24 finals witnessed a stellar lineup of umpires. Seasoned veterans, renowned for their precision and composure, shared the field with rising stars demonstrating exceptional talent.",
+		"date": "MAY 25, 2024",
+		"image": {
+			"src": "./src/asset/images/news-umpire.jpg",
+			"alt": ""
+		},
+		"cta" :{
+			"text": "Read more",
+			"link": "/news/umpires-appointed"
+		}
+	}
+]

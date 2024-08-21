@@ -1,6 +1,10 @@
 ---
+// Data import
+import news from "../data/news-page.json";
+
 import MainLayout from "../layouts/MainLayout.astro";
 import SecondryHero from "../components/SecondryHero.astro";
+import News from "../components/News.astro";
 ---
 
 <MainLayout
@@ -13,5 +17,10 @@ import SecondryHero from "../components/SecondryHero.astro";
 		image="./src/asset/images/news.jpg"
 		link=""
 		linkText=""
+	/>
+	<News
+		title=""
+		subtitle=""
+		news={news}
 	/>
 </MainLayout>
