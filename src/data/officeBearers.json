@@ -28,7 +28,7 @@
 		"title": "Treasurer",
 		"mobile": "0412 315 403",
 		"email": "matthew.heddo@gmail.com",
-		"image": "./src/asset/images/avator.jpg",
+		"image": "./src/asset/images/heddo.png",
 		"description": ""
 	},
 	{
@@ -36,15 +36,7 @@
 		"title": "Asst Secretary/ Delegate to HKHDCA",
 		"mobile": "0401 772 769",
 		"email": "williams88@live.com",
-		"image": "./src/asset/images/steve-williams.jpg",
-		"description": ""
-	},
-	{
-		"name": "Zhan Luo",
-		"title": "Sponsorship & Social Co-ordinator",
-		"mobile": "",
-		"email": "zhan.luo@education.nsw.gov.au",
-		"image": "./src/asset/images/avator.jpg",
+		"image": "./src/asset/images/steve-williams.png",
 		"description": ""
 	},
 	{
