@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/MainLayout.astro
-title: 'Simon Moore recognised by NSWCUSA'
-author: 'NSWCUSA'
-description: 'Simon Moore recognised by NSWCUSA'
+title: "Simon Moore recognised by NSWCUSA"
+author: "NSWCUSA"
+description: "Simon Moore recognised by NSWCUSA"
 ---
 
 <div
@@ -55,15 +55,296 @@ description: 'Simon Moore recognised by NSWCUSA'
 				<h2
 					class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none"
 				>
-					Umpires Appointed to Finals 23/24 session
+					Finals Appointments for season 2023/24
 				</h2>
-				<p class="text-base text-gray-700 mb-4">Simon joined NSWCUSA in 1992 and was upgraded to Full Membership in 1993.</p>
-				<p class="text-base text-gray-700 mb-4">A stalwart of the Hornsby Ku-ring-gai and Hills District Cricket Umpires’ Association, Simon is truly deserving of Principal membership of the Association.</p>
-				<p class="text-base text-gray-700 mb-4">During his time with the NSWCUSA Simon has officiated 483 matches across the HKHDCA competition, the DCA and the IDCA President’s Cup Competitions. A match official of the highest quality, Simon has been appointed to the A Grade final 10 times and has been awarded umpire of the year on four occasions. Along with these accolades Simon in recent seasons has dedicated his time to mentoring new umpires and assisting with their initial time in the middle.</p>
-				<p class="text-base text-gray-700 mb-4">Off field Simon has served the HKHDCUA executive for 14 seasons in various capacities, these include Assistant Secretary, Secretary and President.</p>
-				<p class="text-base text-gray-700 mb-4">Simon has also assisted in the delivery of training courses for captains to provide them with an understanding of Laws and local playing conditions.</p>
-				<p class="text-base text-gray-700 mb-4">In 2017 he was bestowed with Life Membership of the HKHDCUA.</p>
-				<p class="text-base text-gray-700 mb-4">A highly respected person in the Hornsby Ku-ring-gai and Hills cricket community, we congratulate Simon on his upgrade to Principal membership of NSWCUSA.</p>
+				<h3
+					class="max-w-lg mb-6 font-sans text-lg font-bold tracking-tight text-gray-900 sm:text-lg sm:leading-none"
+				>
+					Junior Finals/24
+				</h3>
+				<p class="text-base text-gray-700 mb-4">Fortunately, the Junior Finals were played to a finish in fine weather, a welcome change from the recent seasons.</p>
+				<h4 class="text-base text-gray-700 mb-4 font-semibold">The Umpires appointed were:</h4>
+				<ul class="mb-4 -ml-1 space-y-2">
+					<li class="flex items-start text-base">
+						<span class="mr-1">
+							<svg
+							class="w-5 h-5 mt-px text-blue-accent-400"
+							stroke="currentColor"
+							viewBox="0 0 52 52"
+							>
+							<polygon
+								strokeWidth="4"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								fill="none"
+								points="29 13 14 29 25 29 23 39 38 23 27 23"
+							/>
+							</svg>
+						</span>
+						Under 17:&nbsp;<span>Scott Reid & Peter Lee</span>
+					</li>
+					<li class="flex items-start text-base">
+						<span class="mr-1">
+							<svg
+							class="w-5 h-5 mt-px text-blue-accent-400"
+							stroke="currentColor"
+							viewBox="0 0 52 52"
+							>
+							<polygon
+								strokeWidth="4"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								fill="none"
+								points="29 13 14 29 25 29 23 39 38 23 27 23"
+							/>
+							</svg>
+						</span>
+						Under 15:&nbsp;<span >Geoff Hasler & Steve Williams</span>
+					</li>
+					<li class="flex items-start text-base">
+						<span class="mr-1">
+							<svg
+							class="w-5 h-5 mt-px text-blue-accent-400"
+							stroke="currentColor"
+							viewBox="0 0 52 52"
+							>
+							<polygon
+								strokeWidth="4"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								fill="none"
+								points="29 13 14 29 25 29 23 39 38 23 27 23"
+							/>
+							</svg>
+						</span>
+						Under 14:&nbsp;<span >Steve Redman & Ian Lewis</span>
+					</li>
+					<li class="flex items-start text-base">
+						<span class="mr-1">
+							<svg
+							class="w-5 h-5 mt-px text-blue-accent-400"
+							stroke="currentColor"
+							viewBox="0 0 52 52"
+							>
+							<polygon
+								strokeWidth="4"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								fill="none"
+								points="29 13 14 29 25 29 23 39 38 23 27 23"
+							/>
+							</svg>
+						</span>
+						Under 13:&nbsp;<span >Simon Moore & Bruce Wood</span>
+					</li>
+					<li class="flex items-start text-base">
+						<span class="mr-1">
+							<svg
+							class="w-5 h-5 mt-px text-blue-accent-400"
+							stroke="currentColor"
+							viewBox="0 0 52 52"
+							>
+							<polygon
+								strokeWidth="4"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								fill="none"
+								points="29 13 14 29 25 29 23 39 38 23 27 23"
+							/>
+							</svg>
+						</span>
+						Under 12:&nbsp;<span>Alf James & Kalyan Gaddiraju</span>
+					</li>
+          		</ul>
+				<h3
+					class="max-w-lg mt-10 mb-6 font-sans text-lg font-bold tracking-tight text-gray-900 sm:text-lg sm:leading-none"
+				>
+					Senior Finals/24
+				</h3>
+				<p class="text-base text-gray-700 mb-4">Weather tried its hardest to spoil our Senior Finals, however, due to the great efforts of our groundsmen and untiring contribution from players, the matches were completed within the two days of the finals weekend.</p>
+				<h4 class="text-base text-gray-700 mb-4 font-semibold">The Umpires appointed were:</h4>
+				<ul class="mb-4 -ml-1 space-y-2">
+					<li class="flex items-start text-base">
+						<span class="mr-1">
+							<svg
+							class="w-5 h-5 mt-px text-blue-accent-400"
+							stroke="currentColor"
+							viewBox="0 0 52 52"
+							>
+							<polygon
+								strokeWidth="4"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								fill="none"
+								points="29 13 14 29 25 29 23 39 38 23 27 23"
+							/>
+							</svg>
+						</span>
+						A Grade:&nbsp;<span>Geoff Hasler & Simon Moore</span>
+					</li>
+					<li class="flex items-start text-base">
+						<span class="mr-1">
+							<svg
+							class="w-5 h-5 mt-px text-blue-accent-400"
+							stroke="currentColor"
+							viewBox="0 0 52 52"
+							>
+							<polygon
+								strokeWidth="4"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								fill="none"
+								points="29 13 14 29 25 29 23 39 38 23 27 23"
+							/>
+							</svg>
+						</span>
+						A2 Grade:&nbsp;<span >Jason Fletcher & Steve Redman</span>
+					</li>
+					<li class="flex items-start text-base">
+						<span class="mr-1">
+							<svg
+							class="w-5 h-5 mt-px text-blue-accent-400"
+							stroke="currentColor"
+							viewBox="0 0 52 52"
+							>
+							<polygon
+								strokeWidth="4"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								fill="none"
+								points="29 13 14 29 25 29 23 39 38 23 27 23"
+							/>
+							</svg>
+						</span>
+						B Grade:&nbsp;<span >James Fernandez & Ian Lewis</span>
+					</li>
+					<li class="flex items-start text-base">
+						<span class="mr-1">
+							<svg
+							class="w-5 h-5 mt-px text-blue-accent-400"
+							stroke="currentColor"
+							viewBox="0 0 52 52"
+							>
+							<polygon
+								strokeWidth="4"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								fill="none"
+								points="29 13 14 29 25 29 23 39 38 23 27 23"
+							/>
+							</svg>
+						</span>
+						B2 Grade:&nbsp;<span>Mark Telford & Steve Williams</span>
+					</li>
+					<li class="flex items-start text-base">
+						<span class="mr-1">
+							<svg
+							class="w-5 h-5 mt-px text-blue-accent-400"
+							stroke="currentColor"
+							viewBox="0 0 52 52"
+							>
+							<polygon
+								strokeWidth="4"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								fill="none"
+								points="29 13 14 29 25 29 23 39 38 23 27 23"
+							/>
+							</svg>
+						</span>
+						C Grade:&nbsp;<span>Peter Lee & Scott Reid</span>
+					</li>
+					<li class="flex items-start text-base">
+						<span class="mr-1">
+							<svg
+							class="w-5 h-5 mt-px text-blue-accent-400"
+							stroke="currentColor"
+							viewBox="0 0 52 52"
+							>
+							<polygon
+								strokeWidth="4"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								fill="none"
+								points="29 13 14 29 25 29 23 39 38 23 27 23"
+							/>
+							</svg>
+						</span>
+						C2 Grade:&nbsp;<span>Sue Gregory & Bruce Wood</span>
+					</li>
+					<li class="flex items-start text-base">
+						<span class="mr-1">
+							<svg
+							class="w-5 h-5 mt-px text-blue-accent-400"
+							stroke="currentColor"
+							viewBox="0 0 52 52"
+							>
+							<polygon
+								strokeWidth="4"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								fill="none"
+								points="29 13 14 29 25 29 23 39 38 23 27 23"
+							/>
+							</svg>
+						</span>
+						C3 Grade:&nbsp;<span>Adam Hawkin & Alf James</span>
+					</li>
+					<li class="flex items-start text-base">
+						<span class="mr-1">
+							<svg
+							class="w-5 h-5 mt-px text-blue-accent-400"
+							stroke="currentColor"
+							viewBox="0 0 52 52"
+							>
+							<polygon
+								strokeWidth="4"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								fill="none"
+								points="29 13 14 29 25 29 23 39 38 23 27 23"
+							/>
+							</svg>
+						</span>
+						C4 Grade:&nbsp;<span>David Bostridge & Roger Friend</span>
+					</li>
+					<li class="flex items-start text-base">
+						<span class="mr-1">
+							<svg
+							class="w-5 h-5 mt-px text-blue-accent-400"
+							stroke="currentColor"
+							viewBox="0 0 52 52"
+							>
+							<polygon
+								strokeWidth="4"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								fill="none"
+								points="29 13 14 29 25 29 23 39 38 23 27 23"
+							/>
+							</svg>
+						</span>
+						D Grade:&nbsp;<span>David Finlay & Gavin Wingfield</span>
+					</li>
+					<li class="flex items-start text-base">
+						<span class="mr-1">
+							<svg
+							class="w-5 h-5 mt-px text-blue-accent-400"
+							stroke="currentColor"
+							viewBox="0 0 52 52"
+							>
+							<polygon
+								strokeWidth="4"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								fill="none"
+								points="29 13 14 29 25 29 23 39 38 23 27 23"
+							/>
+							</svg>
+						</span>
+						D2 Grade:&nbsp;<span>Indrani Mukherjee</span>
+					</li>
+          		</ul>
 			</div>
 		</div>
 		<div class="flex items-center justify-center -mx-4 lg:pl-8">
