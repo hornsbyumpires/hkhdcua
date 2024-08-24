@@ -1,13 +1,13 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import aboutImg from "../asset/images/about.png";
 export interface Props {
 	title: string;
 	subtitle: string;
 	body: string;
+	image: string;
 }
 
-const { title, subtitle, body } = Astro.props as Props;
+const { title, subtitle, body, image } = Astro.props as Props;
 ---
 
 <div
@@ -27,17 +27,18 @@ const { title, subtitle, body } = Astro.props as Props;
 					{title}
 				</h2>
 				<p class="text-base text-gray-700 md:text-lg">
-					{body}
+					<Fragment set:html={body} />
 				</p>
 			</div>
 		</div>
 		<div class="object-cover w-full rounded">
 			<Picture
-				src={aboutImg}
+				src={image}
 				alt={title}
-				widths={[200, 400, 800]}
-				sizes="(max-width: 800px) 100vw, 800px"
+				widths={[200, 400, 640]}
+				sizes="(max-width: 640px) 100vw, 640px"
 				aspectRatio="16:9"
+				class:list={'rounded-xl'}
 			/>
 		</div>
 	</div>
