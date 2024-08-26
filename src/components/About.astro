@@ -31,15 +31,13 @@ const { title, subtitle, body, image } = Astro.props as Props;
 				</p>
 			</div>
 		</div>
-		<div class="object-cover w-full rounded">
-			<Picture
-				src={image}
-				alt={title}
-				widths={[200, 400, 640]}
-				sizes="(max-width: 640px) 100vw, 640px"
-				aspectRatio="16:9"
-				class:list={'rounded-xl'}
-			/>
-		</div>
+		<Picture
+			src={image}
+			alt={title}
+			widths={[200, 400, 640]}
+			sizes="(max-width: 640px) 100vw, 640px"
+			aspectRatio="16:9"
+			class:list={"object-cover w-full rounded shadow-lg"}
+		/>
 	</div>
 </div>

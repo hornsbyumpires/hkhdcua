@@ -1,0 +1,117 @@
+---
+import { Picture } from "@astrojs/image/components";
+import Link from "./Link.astro";
+
+export interface Props {
+	title: string;
+	subtitle: string;
+	body: string;
+	award1: string;
+	award2: string;
+	award3: string;
+	image: string;
+	href: string;
+	ctaText: string;
+}
+
+const { title, subtitle, body, award1, award2, award3, image, href, ctaText } = Astro.props as Props;
+---
+
+<div class="bg-blue-50">
+	<div
+		class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+	>
+		<div
+			class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12"
+		>
+			<div>
+				<p
+					class="inline-block px-6 py-2 mb-4 text-xs font-semibold tracking-wider text-white uppercase rounded-full bg-blue-accent-400"
+				>
+					{subtitle}
+				</p>
+			</div>
+			<h2
+				class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto"
+			>
+				{title}
+			</h2>
+		</div>
+		<div class="grid max-w-screen-lg gap-8 lg:grid-cols-2 sm:mx-auto">
+			<Picture
+				src={image}
+				alt={title}
+				widths={[800]}
+				sizes="(max-width: 800px) 100vw, 800px"
+				aspectRatio="16:9"
+				class="object-cover w-full rounded shadow-lg"
+			/>
+			<div class="flex flex-col justify-center">
+				<div class="pb-4 mb-4 border-b">
+					<p class="text-md text-gray-900">
+						{body}
+					</p>
+				</div>
+				<ul class="mb-4 ml-1 space-y-2">
+					<li class="flex items-start text-base">
+						<span class="mr-1">
+							<svg
+								class="w-5 h-5 mt-px text-blue-accent-400"
+								stroke="currentColor"
+								viewBox="0 0 52 52"
+							>
+								<polygon
+									stroke-width="4"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									fill="none"
+									points="29 13 14 29 25 29 23 39 38 23 27 23"
+								></polygon>
+							</svg>
+						</span>
+						<Fragment set:html={award1} />
+					</li>
+					<li class="flex items-start text-base">
+						<span class="mr-1">
+							<svg
+								class="w-5 h-5 mt-px text-blue-accent-400"
+								stroke="currentColor"
+								viewBox="0 0 52 52"
+							>
+								<polygon
+									stroke-width="4"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									fill="none"
+									points="29 13 14 29 25 29 23 39 38 23 27 23"
+								></polygon>
+							</svg>
+						</span>
+						<Fragment set:html={award2} />
+					</li>
+					<li class="flex items-start text-base">
+						<span class="mr-1">
+							<svg
+								class="w-5 h-5 mt-px text-blue-accent-400"
+								stroke="currentColor"
+								viewBox="0 0 52 52"
+							>
+								<polygon
+									stroke-width="4"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									fill="none"
+									points="29 13 14 29 25 29 23 39 38 23 27 23"
+								></polygon>
+							</svg>
+						</span>
+						<Fragment set:html={award3} />
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="flex md:justify-center items-center mt-4">
+			<Link text={ctaText} href={href} style="primary" isFilled={true} />
+		</div>
+	</div>
+</div>

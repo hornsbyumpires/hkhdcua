@@ -8,6 +8,7 @@ import About from "../components/About.astro";
 import Join from "../components/Join.astro";
 import News from "../components/News.astro";
 import Sponsors from "../components/Sponsors.astro";
+import Awards from "../components/Awards.astro";
 ---
 
 <MainLayout
@@ -44,14 +45,25 @@ import Sponsors from "../components/Sponsors.astro";
 			title: "DiJONES Real Estate",
 			body: "With close to a decade’s worth of experience, combined with helping over 320 property seekers and $330 million in property transactions, Ray Talati is a sought after Upper North Shore property specialist.",
 			image: "./src/asset/images/logo.DiJONES.png",
-			link: "sponsors/chadwick-real-estate"
+			link: "sponsors/chadwick-real-estate",
 		}}
 		sponsorTertiary={{
 			title: "Ekim Brewing",
 			body: "We are a small, locally owned craft brewery based in Mt Kuring-Gai, NSW. Raised in the area and with a combined 25 years of experience in the brewing industry, we are avid community members and supporters of local sports clubs, charity events, fire brigade, and fellow beer connoisseurs.",
 			image: "./src/asset/images/ekim-brewing-logo.jpg",
-			link: "sponsors/ekim-brewing"
+			link: "sponsors/ekim-brewing",
 		}}
+	/>
+	<Awards
+		title="Awards & Recognition"
+		subtitle="Awards"
+		body="The Alex Terry Umpire of the Year Award, the Berry McDonald Umpire Service Award, and, since 2015/16, the President's Award were established by our association in 2012/2013 to acknowledge the exceptional performance of our members both on and off the field."
+		award1="<p>The Alex Terry Umpire of the year for season 23/24: <span class='font-bold'>Simon Moore.</span><p>"
+		award2="<p>The Barry McDonald Umpire Service Award for season 23/24: <span class='font-bold'>Simon Moore.</span></p>"
+		award3="<p>The President's Award for season 23/24: <span class='font-bold'>David Bostridge</span></p>"
+		image="./src/asset/images/awards.jpg"
+		href="/awards"
+		ctaText="Learn more"
 	/>
 	<Join
 		title="Join us at the HKHDCUA"

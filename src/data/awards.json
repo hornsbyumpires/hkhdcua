@@ -1,0 +1,206 @@
+[
+	{
+		"title": "The Alex Terry umpire of the year award",
+		"description": "The award is based upon the captain's assessments of each umpire;s performance in the A grade and A2 grade matches though the preliminary rounds of the senior competition.",
+		"winners": [
+			{
+				"season": "2023/24",
+				"name": "Simon Moore"
+			},
+			{
+				"season": "2022/23",
+				"name": "Geoff Hasler"
+			},
+			{
+				"season": "2021/22",
+				"name": "Geoff Hasler"
+			},
+			{
+				"season": "2020/21",
+				"name": "Jason Fletcher"
+			},
+			{
+				"season": "2019/20",
+				"name": "Geoff Hasler"
+			},
+			{
+				"season": "2018/19",
+				"name": "Simon Moore/ Steve Hill"
+			},
+			{
+				"season": "2017/18",
+				"name": "Steve Hill"
+			},
+			{
+				"season": "2016/17",
+				"name": "Simon Moore"
+			},
+			{
+				"season": "2015/16",
+				"name": "Geoff Hasler"
+			},
+			{
+				"season": "2014/15",
+				"name": "Geoff Hasler/ Simon Moore"
+			},
+			{
+				"season": "2013/14",
+				"name": "Simon Moore"
+			},
+			{
+				"season": "2012/13",
+				"name": "Geoff Hasler"
+			}
+		]
+	},
+	{
+		"title": "The Barry McDonald umpire service award",
+		"description": "The award is based upon an accumulation of points for matches in which the HKHDCUA has made the appointments in HKHDCUA, IDCA competitions, plus attendance at HKHDCUA meetings and functions",
+		"winners": [
+			{
+				"season": "2023/24",
+				"name": "Simon Moore"
+			},
+			{
+				"season": "2022/23",
+				"name": "Geoff Hasler"
+			},
+			{
+				"season": "2021/22",
+				"name": "Simon Moore"
+			},
+			{
+				"season": "2020/21",
+				"name": "Geoff Hasler"
+			},
+			{
+				"season": "2019/20",
+				"name": "Geoff Hasler"
+			},
+			{
+				"season": "2018/19",
+				"name": "Jason Fletcher"
+			},
+			{
+				"season": "2017/18",
+				"name": "Simon Moore"
+			},
+			{
+				"season": "2016/17",
+				"name": "Geoff Hasler"
+			},
+			{
+				"season": "2015/16",
+				"name": "Steve Wilson"
+			},
+			{
+				"season": "2014/15",
+				"name": "Simon Moore"
+			},
+			{
+				"season": "2013/14",
+				"name": "Ian Lewis"
+			},
+			{
+				"season": "2012/13",
+				"name": "Barry McDonald"
+			}
+		]
+	},
+	{
+		"title": "The President's award",
+		"description": "The President's award is. as suggested by its name, the President's recognition of an individual's contribution and commitment to umpiring within our association and/or off-field performance",
+		"winners": [
+			{
+				"season": "2023/24",
+				"name": "David Bostridge"
+			},
+			{
+				"season": "2022/23",
+				"name": "Geoff Hasler"
+			},
+			{
+				"season": "2021/22",
+				"name": "Ian Lewis"
+			},
+			{
+				"season": "2020/21",
+				"name": "Barry McDonald"
+			},
+			{
+				"season": "2019/20",
+				"name": "Peter Lee"
+			},
+			{
+				"season": "2018/19",
+				"name": "Steve Redman"
+			},
+			{
+				"season": "2017/18",
+				"name": "Jason Fletcher"
+			},
+			{
+				"season": "2016/17",
+				"name": "Steve Hill"
+			},
+			{
+				"season": "2015/16",
+				"name": "Toby Norrish"
+			}
+		]
+	},
+	{
+		"title": "HKHDCUA A grade player of the year award",
+		"description": "The A grade player of the year award is assessed throughout the preliminary rounds on a 3/2/1 points vote by the umpiring team in each match.",
+		"winners": [
+			{
+				"season": "2023/24",
+				"name": "Adam West(Berowra)"
+			},
+			{
+				"season": "2022/23",
+				"name": "Cooper Davenport(Berowra)"
+			},
+			{
+				"season": "2022/23",
+				"name": "Sean Clarence(WPHC)"
+			},
+			{
+				"season": "2021/22",
+				"name": "Nick Hammond(Kenthurst)"
+			},
+			{
+				"season": "2020/21",
+				"name": "Brad Jones(Glenorie)"
+			},
+			{
+				"season": "2019/20",
+				"name": "Alex Pagano(Kenthurst)"
+			},
+			{
+				"season": "2018/19",
+				"name": "Scott Griffin(Berowra)"
+			},
+			{
+				"season": "2017/18",
+				"name": "Jasdev Bassan(Berowra)"
+			},
+			{
+				"season": "2016/17",
+				"name": "Kushal Patel(Berowra)"
+			},
+			{
+				"season": "2015/16",
+				"name": "Scott Griffin(Berowra)"
+			},
+			{
+				"season": "2014/15",
+				"name": "Dale Wellington(A.R.L)"
+			},
+			{
+				"season": "2013/14",
+				"name": "Sol Tomlinson(WPHC)"
+			}
+		]
+	}
+]
