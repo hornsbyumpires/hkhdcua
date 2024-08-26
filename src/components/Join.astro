@@ -16,51 +16,54 @@ export interface Props {
 const { title, subtitle, body, href, ctaText, imageSrc } = Astro.props;
 ---
 
-<div class="bg-blue-50">
+<div
+	class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+>
 	<div
-		class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+		class="flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto"
 	>
-		<div
-			class="flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto"
-		>
-			<div class="relative lg:w-1/2">
-				<Picture
-					src={imageSrc}
-					alt={title}
-					widths={[200, 400, 800]}
-					sizes="(max-width: 800px) 100vw, 800px"
-					aspectRatio="16:9"
-					class="object-cover w-full lg:absolute h-80 lg:h-full"
-				/>
-				<svg
-					class="absolute top-0 right-0 hidden h-full text-white lg:inline-block"
-					viewBox="0 0 19 104"
-					fill="currentColor"
-				>
-					<polygon
-						points="17.3036738 5.68434189e-14 20 5.68434189e-14 20 104 0.824555778 104"
-					></polygon>
-				</svg>
-			</div>
-			<div
-				class="flex flex-col justify-center p-8 bg-white lg:p-16 lg:pl-10 lg:w-1/2"
+		<div class="relative lg:w-1/2">
+			<Picture
+				src={imageSrc}
+				alt={title}
+				widths={[200, 400, 800]}
+				sizes="(max-width: 800px) 100vw, 800px"
+				aspectRatio="16:9"
+				class="object-cover w-full lg:absolute h-80 lg:h-full"
+			/>
+			<svg
+				class="absolute top-0 right-0 hidden h-full text-white lg:inline-block"
+				viewBox="0 0 19 104"
+				fill="currentColor"
 			>
-				<div>
-					<p
-						class="inline-block px-6 py-2 mb-4 text-xs font-semibold tracking-wider text-white uppercase rounded-full bg-blue-accent-400"
-					>
-						{subtitle}
-					</p>
-				</div>
-				<h5 class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl">
-					{title}
-				</h5>
-				<p class="mb-5 text-gray-800">
-					{body}
+				<polygon
+					points="17.3036738 5.68434189e-14 20 5.68434189e-14 20 104 0.824555778 104"
+				></polygon>
+			</svg>
+		</div>
+		<div
+			class="flex flex-col justify-center p-8 bg-white lg:p-16 lg:pl-10 lg:w-1/2"
+		>
+			<div>
+				<p
+					class="inline-block px-6 py-2 mb-4 text-xs font-semibold tracking-wider text-white uppercase rounded-full bg-blue-accent-400"
+				>
+					{subtitle}
 				</p>
-				<div class="flex items-center">
-					<Link text={ctaText} href={href} style="primary" isFilled={true} />
-				</div>
+			</div>
+			<h5 class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl">
+				{title}
+			</h5>
+			<p class="mb-5 text-gray-800">
+				{body}
+			</p>
+			<div class="flex items-center">
+				<Link
+					text={ctaText}
+					href={href}
+					style="primary"
+					isFilled={true}
+				/>
 			</div>
 		</div>
 	</div>

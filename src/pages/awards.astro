@@ -1,0 +1,25 @@
+---
+// Data import
+import awards from "../data/awards.json";
+
+import MainLayout from "../layouts/MainLayout.astro";
+import SecondryHero from "../components/SecondryHero.astro";
+import AwardsItem from "../components/AwardsItem.astro";
+---
+
+<MainLayout
+	title="Welcome to Hornsby Ku-ring-gai & Hills District Cricket Umpires Association."
+>
+	<SecondryHero
+		title="Awards & Recognition"
+		subtitle="Awards"
+		description="The Alex Terry Umpire of the Year Award, the Berry McDonald Umpire Service Award, and, since 2015/16, the President's Award were established by our association in 2012/2013 to acknowledge the exceptional performance of our members both on and off the field."
+		image="./src/asset/images/awards-hero.jpg"
+		link=""
+		linkText=""
+	/>
+	<AwardsItem
+		title="The HKHDCUA Annual Awards & Recognition"
+		awards={awards}
+	/>
+</MainLayout>
