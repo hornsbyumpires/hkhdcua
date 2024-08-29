@@ -1,0 +1,84 @@
+---
+interface Props {
+	name: string;
+	title: string;
+	mobile: string;
+	email: string;
+}
+
+const { name, title, mobile, email } = Astro.props as Props;
+---
+
+<div
+	class="relative p-px overflow-hidden transition duration-300 transform border rounded shadow-sm hover:scale-105 group hover:shadow-xl"
+>
+	<div
+		class="absolute bottom-0 left-0 w-full h-1 duration-300 origin-left transform scale-x-0 bg-blue-accent-400 group-hover:scale-x-100"
+	>
+	</div>
+	<div
+		class="absolute bottom-0 left-0 w-1 h-full duration-300 origin-bottom transform scale-y-0 bg-blue-accent-400 group-hover:scale-y-100"
+	>
+	</div>
+	<div
+		class="absolute top-0 left-0 w-full h-1 duration-300 origin-right transform scale-x-0 bg-blue-accent-400 group-hover:scale-x-100"
+	>
+	</div>
+	<div
+		class="absolute bottom-0 right-0 w-1 h-full duration-300 origin-top transform scale-y-0 bg-blue-accent-400 group-hover:scale-y-100"
+	>
+	</div>
+	<div
+		class="relative flex flex-col h-full p-5 bg-white rounded-sm lg:items-center lg:flex-row"
+	>
+		<div class="mb-6 mr-6 lg:mb-0">
+			<div
+				class="flex items-center justify-center w-20 h-20 rounded-full bg-indigo-50 lg:w-24 lg:h-24"
+			>
+				<svg
+					viewBox="0 0 55 55"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M27.665 51.309C14.607 51.309 4.02197 40.724 4.02197 27.666C4.02197 14.608 14.607 4.02301 27.665 4.02301C40.723 4.02301 51.308 14.608 51.308 27.666C51.308 40.723 40.723 51.309 27.665 51.309Z"
+						fill="#377ffd"></path>
+					<path
+						d="M27.665 54.33C12.938 54.33 1 42.392 1 27.665C1 12.938 12.938 1 27.665 1C42.392 1 54.33 12.938 54.33 27.665C54.33 42.392 42.392 54.33 27.665 54.33Z"
+						stroke="#377ffd"
+						stroke-width="0.4959"
+						stroke-miterlimit="10"></path>
+					<path
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M38.31 32.248C37.72 31.959 34.861 30.557 34.327 30.368C33.792 30.168 33.403 30.079 33.014 30.657C32.625 31.235 31.501 32.537 31.167 32.915C30.822 33.304 30.489 33.349 29.899 33.06C29.32 32.771 27.44 32.17 25.215 30.189C23.49 28.665 22.311 26.774 21.977 26.195C21.644 25.616 21.944 25.305 22.233 25.015C22.5 24.748 22.812 24.336 23.112 24.003C23.19 23.903 23.257 23.814 23.323 23.725C23.457 23.514 23.557 23.313 23.69 23.035C23.891 22.646 23.791 22.312 23.646 22.023C23.501 21.734 22.333 18.885 21.843 17.728C21.365 16.571 20.876 16.771 20.53 16.771C20.196 16.771 19.807 16.716 19.417 16.716C19.028 16.716 18.393 16.861 17.859 17.439C17.325 18.018 15.823 19.42 15.823 22.268C15.823 22.936 15.945 23.603 16.123 24.238C16.713 26.274 17.981 27.954 18.204 28.244C18.493 28.622 22.232 34.652 28.151 36.978C34.081 39.281 34.081 38.513 35.15 38.413C36.218 38.323 38.599 37.022 39.077 35.665C39.567 34.319 39.567 33.161 39.422 32.917C39.278 32.682 38.888 32.537 38.31 32.248Z"
+						fill="#FBFBF6"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="flex flex-col justify-between flex-grow">
+			<div>
+				<h6 class="mb-2 font-semibold leading-5">{name}</h6>
+				<p class="mb-1 text-sm text-blue-accent-700 font-bold">
+					{title}
+				</p>
+				<p class="mb-1 text-sm text-gray-900">
+					Email: <a
+						href={`mailto:${email}`}
+						class="text-xs text-gray-800 transition-colors duration-300 hover:text-blue-accent-400"
+					>
+						{email}
+					</a>
+				</p>
+				<p class="text-sm text-gray-900">
+					Mobile: <a
+						href={`tel:${mobile}`}
+						class="text-xs text-gray-800 transition-colors duration-300 hover:text-blue-accent-400"
+					>
+						{mobile}
+					</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
