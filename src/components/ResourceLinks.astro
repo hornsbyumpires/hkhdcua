@@ -8,6 +8,7 @@ export interface Props {
 		image: string;
 		body: string;
 		link: string;
+		target: string;
 	}>;
 }
 
@@ -29,7 +30,7 @@ const { title, resorces } = Astro.props as Props;
 	>
 		{
 			resorces.map((resorce) => (
-				<a href={resorce.link} aria-label={resorce.title}>
+				<a href={resorce.link} aria-label={resorce.title} target={resorce.target}>
 					<div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
 						<Picture
 							src={resorce.image}
