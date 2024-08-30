@@ -2,19 +2,50 @@
 	{
 		"title": "MCC laws of cricket",
 		"image": "./src/asset/images/mcc-laws.jpg",
-		"body": "Umpire training courses are being confirmed all across the state as NSWCUSA’s winter",
-		"link": "/news-n-events/mcc-laws"
+		"body": "MCC Cricket Laws are the official rules governing the game of cricket. They are maintained by the Marylebone Cricket Club (MCC), a prestigious cricket club in London, England. The laws provide detailed guidelines on everything from the equipment used to the batting and bowling techniques. They are regularly updated to reflect changes in the game and ensure fair play.",
+		"link": "https://www.lords.org/mcc/the-laws-of-cricket",
+		"target": "_blank"
 	},
 	{
-		"title": "HKHDCA local playing conditions",
-		"image": "./src/asset/images/training.png",
-		"body": "Umpire training courses are being confirmed all across the state as NSWCUSA’s winter.",
-		"link": "/news-n-events/local-playing-conditions"
+		"title": "Conduct & Playing Rules of Junior CompetitionSeason 2022/23",
+		"image": "./src/asset/images/junior-compitition.jpg",
+		"body": "The HORNSBY KU-RING-GAI & HILLS DISTRICT CRICKET ASSOCIATION JUNIOR COMPETITION likely has a set of rules governing the conduct and gameplay of its junior cricket matches. These rules would typically cover aspects such as:",
+		"link": "https://drive.google.com/file/d/1GMT-Go-L9lQXy_o6SCuoWqKLvSe41n0b/view",
+		"target": "_blank"
 	},
 	{
-		"title": "MCC laws of cricket animation Series",
-		"image": "./src/asset/images/mcc-laws.jpg",
-		"body": "Umpire training courses are being confirmed all across the state as NSWCUSA’s winter.",
-		"link": "/news-n-events/mcc-laws-animation-series"
+		"title": "Conduct & Playing Rules of Senior CompetitionSeason 2022/23",
+		"image": "./src/asset/images/senior-compitition.jpg",
+		"body": "The HORNSBY KU-RING-GAI & HILLS DISTRICT CRICKET ASSOCIATION SENIOR COMPETITION likely has a set of rules governing the conduct and gameplay of its junior cricket matches. These rules would typically cover aspects such as:",
+		"link": "https://drive.google.com/file/d/1egpTni58WkH7Vo89PhyIqxqx5s_5mJg7/view",
+		"target": "_blank"
+	},
+	{
+		"title": "Umpire Report form",
+		"image": "./src/asset/images/umpire-report.jpg",
+		"body": "A cricket umpire report is a comprehensive document detailing the events and decisions made during a cricket match. It serves as an official record of the game, providing a detailed account of the match's progress",
+		"link": "https://docs.google.com/forms/d/e/1FAIpQLScyujS2YPE--Px2Ns1Wiela4DFG21By_66U-wu2DJ_cwVDuvg/viewform",
+		"target": "_blank"
+	},
+	{
+		"title": "Captain’s Report form",
+		"image": "./src/asset/images/captain-report.jpg",
+		"body": "A cricket captain's report provides a comprehensive analysis of a team's match performance. It includes a match overview, team evaluation, individual highlights, areas for improvement, strategic analysis, and the captain's observations. This report is essential for team development and planning.",
+		"link": "https://docs.google.com/forms/d/e/1FAIpQLScGRh484KcXe22juMuZWnBkrC1LYoceDmfrg3bijcuNCBwNgA/viewform",
+		"target": "_blank"
+	},
+	{
+		"title": "HKHDCA 2023-24 Captain's Ticket.",
+		"image": "./src/asset/images/captain-ticket.jpg",
+		"body": "Below is the entry point to undertake the Captain's exam. Please enter your details below to start the captains ticket assessment. Note, that it can only be completed once and valid name, mycricket player ID number and email address must be entered.",
+		"link": "https://docs.google.com/forms/d/e/1FAIpQLScF363riUo5Ve9NFkdqeq_4o0Pd1Z_Pej4xfdv3Ocj-v5fhLw/closedform",
+		"target": "_blank"
+	},
+	{
+		"title": "Working with children certification",
+		"image": "./src/asset/images/wwcc.jpg",
+		"body": "The Working with Children Check (WWCC) is a requirement for anyone who works or volunteers in child-related work in NSW. It involves a National Police Check (criminal history record check) and a review of reportable workplace misconduct.",
+		"link": "https://www.service.nsw.gov.au/transaction/apply-for-a-working-with-children-check",
+		"target": "_blank"
 	}
 ]
