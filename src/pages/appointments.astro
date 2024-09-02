@@ -7,7 +7,10 @@ const sheetID = "18GvoyOdac_AW9AgzMVoTjI7Qf8CfE4CLxn6XfbZI6Pk";
 const baseURL = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
 const sheetName = "appointment";
 const query = encodeURIComponent("Select *");
-const url = `${baseURL}&sheet=${sheetName}&tq=${query}`;
+const timestamp = Date.now();
+const uniqueParam = `&t=${timestamp}`;
+
+const url = `${baseURL}&sheet=${sheetName}&tq=${query}${uniqueParam}`;
 
 const response = await fetch(url);
 const data = await response.text();
