@@ -1,6 +1,10 @@
 ---
+// Data import
+import faqs from "../data/faq.json";
+
 import MainLayout from "../layouts/MainLayout.astro";
 import SecondryHero from "../components/SecondryHero.astro";
+import FAQ from "../components/FAQ.astro";
 ---
 
 <MainLayout
@@ -14,4 +18,5 @@ import SecondryHero from "../components/SecondryHero.astro";
 		link=""
 		linkText=""
 	/>
+	<FAQ title="Frequently Asked Questions" subtitle="Our FAQs" faqs={faqs} />
 </MainLayout>

@@ -20,10 +20,6 @@
 		"path": "/resources"
 	},
 	{
-		"name": "Learning",
-		"path": "/learning"
-	},
-	{
 		"name": "News & Events",
 		"path": "/news-n-events"
 	},
