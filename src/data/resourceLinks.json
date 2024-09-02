@@ -42,6 +42,20 @@
 		"target": "_blank"
 	},
 	{
+		"title": "First-time registration for umpires",
+		"image": "./src/asset/images/new-umpire.jpg",
+		"body": "First-time registration for umpires typically involves completing an application form, providing necessary documentation, and potentially attending an orientation or training session. This process ensures that new umpires understand the rules, regulations, and expectations of the role.",
+		"link": "https://registration-cricket-au.officialshq.com/",
+		"target": "_blank"
+	},
+	{
+		"title": "For returning umpires",
+		"image": "./src/asset/images/returning-umpire.jpg",
+		"body": "Returning umpires often need to re-register or renew their credentials to continue officiating matches.",
+		"link": "https://home.officialshq.com/",
+		"target": "_blank"
+	},
+	{
 		"title": "Working with children certification",
 		"image": "./src/asset/images/wwcc.jpg",
 		"body": "The Working with Children Check (WWCC) is a requirement for anyone who works or volunteers in child-related work in NSW. It involves a National Police Check (criminal history record check) and a review of reportable workplace misconduct.",

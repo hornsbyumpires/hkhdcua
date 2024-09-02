@@ -250,33 +250,55 @@ const { title, subtitle, bodyCopy, appointments } = Astro.props as Props;
 										/>
 									</svg>
 								</div>
-								<p class="mb-2">
-									<span class="text-xs text-gray-800">
-										Competition:
-									</span>
-									<br />
-									<span class="text-sm font-bold">
-										{Object.values(appointment["c"])[0]?.v}
-									</span>
-								</p>
-								<p class="mb-2">
-									<span class="text-xs text-gray-800">
-										Venue:
-									</span>
-									<br />
-									<span class="text-sm font-bold">
-										{Object.values(appointment["c"])[6]?.v}
-									</span>
-								</p>
-								<p class="mb-2">
-									<span class="text-xs text-gray-800">
-										Round:
-									</span>
-									<br />
-									<span class="text-sm font-bold">
-										{Object.values(appointment["c"])[1]?.v}
-									</span>
-								</p>
+								<div class="flex flex-row justify-between border-b-2 mb-2">
+									<p class="mb-2">
+										<span class="text-xs text-gray-800">
+											Grade:
+										</span>
+										<br />
+										<span class="text-sm font-bold">
+											{Object.values(appointment["c"])[0]?.v}
+										</span>
+									</p>
+									<p class="mb-2">
+										<span class="text-xs text-gray-800">
+											Game Type:
+										</span>
+										<br />
+										<span class="text-sm font-bold">
+											{Object.values(appointment["c"])[1]?.v}
+										</span>
+									</p>
+									<p class="mb-2">
+										<span class="text-xs text-gray-800">
+											Round:
+										</span>
+										<br />
+										<span class="text-sm font-bold">
+											{Object.values(appointment["c"])[4]?.v}
+										</span>
+									</p>
+								</div>
+								<div class="flex flex-row justify-between">
+									<p class="mb-2">
+										<span class="text-xs text-gray-800">
+											Date:
+										</span>
+										<br />
+										<span class="text-sm font-bold">
+											{Object.values(appointment["c"])[2]?.v}
+										</span>
+									</p>
+									<p class="mb-2">
+										<span class="text-xs text-gray-800">
+											Time:
+										</span>
+										<br />
+										<span class="text-sm font-bold">
+											{Object.values(appointment["c"])[3]?.v}
+										</span>
+									</p>
+								</div>
 								<table class="w-full text-xs text-left rtl:text-right text-gray-500 dark:text-gray-400 mb-2">
 									<thead class="text-xs text-white uppercase bg-blue-400">
 										<tr>
@@ -286,18 +308,25 @@ const { title, subtitle, bodyCopy, appointments } = Astro.props as Props;
 									</thead>
 									<tbody>
 										<tr class="bg-blue border-b dark:bg-blue-200 hover:bg-blue-300 text-white">
-											<td class="px-2 py-3">{Object.values(appointment["c"])[2]?.v}</td>
-											<td class="px-2 py-3">{Object.values(appointment["c"])[3]?.v}</td>
+											<td class="px-2 py-3">{Object.values(appointment["c"])[8]?.v}</td>
+											<td class="px-2 py-3">{Object.values(appointment["c"])[9]?.v}</td>
 										</tr>
 									</tbody>
 								</table>
-
+								<p class="mb-2 flex flex-row gap-1 justify-start items-center">
+									<span class="text-xs text-gray-800">
+										Venue:
+									</span>
+									<span class="text-xs font-bold">
+										{Object.values(appointment["c"])[7]?.v}
+									</span>
+								</p>
 								<p class="mb-2 flex flex-row gap-1 justify-start items-center">
 									<span class="text-xs text-gray-800">
 										Home Team:
 									</span>
 									<span class="text-xs font-bold">
-										{Object.values(appointment["c"])[4]?.v}
+										{Object.values(appointment["c"])[5]?.v}
 									</span>
 								</p>
 								<p class="mb-2 flex flex-row gap-1 justify-start items-center">
@@ -305,7 +334,7 @@ const { title, subtitle, bodyCopy, appointments } = Astro.props as Props;
 										Away Team:
 									</span>
 									<span class="text-xs font-bold">
-										{Object.values(appointment["c"])[5]?.v}
+										{Object.values(appointment["c"])[6]?.v}
 									</span>
 								</p>
 							</div>
