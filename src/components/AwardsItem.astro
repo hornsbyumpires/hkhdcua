@@ -85,7 +85,7 @@ const { title, awards } = Astro.props as Props;
 								{item.description}
 							</p>
 							<table class="w-full text-xs text-left rtl:text-right text-gray-500 dark:text-gray-400 mb-2">
-								<thead class="text-xs text-white uppercase bg-blue-400">
+								<thead class="text-xs text-white uppercase bg-blue-700">
 									<tr>
 										<th scope="col" class="px-2 py-3">
 											Season
@@ -97,7 +97,7 @@ const { title, awards } = Astro.props as Props;
 								</thead>
 								<tbody>
 									{item.winners.map((winner: Winner) => (
-										<tr class="bg-blue border-b dark:bg-blue-200 hover:bg-blue-300 text-white">
+										<tr class="bg-blue-400 border-b text-white">
 											<td class="px-2 py-3">
 												{winner.season}
 											</td>
