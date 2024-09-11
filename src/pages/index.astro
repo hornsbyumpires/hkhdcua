@@ -20,17 +20,6 @@ import Awards from "../components/Awards.astro";
 		subtitle="WELCOME TO"
 		ctaText="Join with us"
 	/>
-	<About
-		title="Who we are & what we do"
-		subtitle="ABOUT US"
-		body="The Association was formed in 1989 and incorporated in 2008 to administer, promote and manage the development of cricket umpires within the Hornsby Ku- Ring- Gai & Hills District Cricket Association. We provide umpires for the Senior, Junior (finals) and Representative Competitions as our primary responsibility. Training courses for Captains, players and managers are offered in addition to continuing education seminars for our umpires. For more information please email: <a class='text-blue-700' href='hornsbyumpires@outlook.com'>hornsbyumpires@outlook.com</a>"
-		image="./src/asset/images/about-us-home.jpg"
-	/>
-	<News
-		title="Our upcoming news & events"
-		subtitle="NEWS & EVENTS"
-		news={news}
-	/>
 	<Sponsors
 		title="Our valued sponsors"
 		subtitle="OUR SPONSORS"
@@ -53,6 +42,17 @@ import Awards from "../components/Awards.astro";
 			image: "./src/asset/images/ekim-brewing-logo.jpg",
 			link: "sponsors/ekim-brewing",
 		}}
+	/>
+	<News
+		title="Our upcoming news & events"
+		subtitle="NEWS & EVENTS"
+		news={news}
+	/>
+	<About
+		title="Who we are & what we do"
+		subtitle="ABOUT US"
+		body="The Association was formed in 1989 and incorporated in 2008 to administer, promote and manage the development of cricket umpires within the Hornsby Ku- Ring- Gai & Hills District Cricket Association. We provide umpires for the Senior, Junior (finals) and Representative Competitions as our primary responsibility. Training courses for Captains, players and managers are offered in addition to continuing education seminars for our umpires. For more information please email: <a class='text-blue-700' href='hornsbyumpires@outlook.com'>hornsbyumpires@outlook.com</a>"
+		image="./src/asset/images/about-us-home.jpg"
 	/>
 	<Awards
 		title="Awards & Recognition"
