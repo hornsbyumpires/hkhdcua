@@ -7,6 +7,39 @@ export interface Props {
 }
 
 const { title, subtitle, bodyCopy, appointments } = Astro.props as Props;
+
+function dateConvert(data: string): string {
+	const match = data.match(/Date\((\d+),(\d+),(\d+)\)/);
+	if (match) {
+		const year = parseInt(match[1]);
+		const month = parseInt(match[2]) - 1;
+		const day = parseInt(match[3]);
+		return `${year}/${month.toString().padStart(2, "0")}/${day
+			.toString()
+			.padStart(2, "0")}`;
+	} else {
+		return "Invalid date string format.";
+	}
+}
+function timeConvert(time: string): string {
+	const match = time.match(/Date\((\d+),(\d+),(\d+),(\d+),(\d+),(\d+)\)/);
+	if (match) {
+		const year = parseInt(match[1]);
+		const month = parseInt(match[2]) - 1;
+		const day = parseInt(match[3]);
+		const hour = parseInt(match[4]);
+		const minute = parseInt(match[5]);
+		const second = parseInt(match[6]);
+
+		const date = new Date(year, month, day, hour, minute, second);
+		const formattedTime = date.toLocaleTimeString("en-US", {
+			hour12: true,
+		});
+		return formattedTime;
+	} else {
+		return "Invalid time string format.";
+	}
+}
 ---
 
 <div
@@ -257,7 +290,11 @@ const { title, subtitle, bodyCopy, appointments } = Astro.props as Props;
 										</span>
 										<br />
 										<span class="text-sm font-bold">
-											{Object.values(appointment["c"])[0]?.v}
+											{
+												Object.values(
+													appointment["c"]
+												)[0]?.v
+											}
 										</span>
 									</p>
 									<p class="mb-2">
@@ -266,7 +303,11 @@ const { title, subtitle, bodyCopy, appointments } = Astro.props as Props;
 										</span>
 										<br />
 										<span class="text-sm font-bold">
-											{Object.values(appointment["c"])[1]?.v}
+											{
+												Object.values(
+													appointment["c"]
+												)[1]?.v
+											}
 										</span>
 									</p>
 									<p class="mb-2">
@@ -275,7 +316,11 @@ const { title, subtitle, bodyCopy, appointments } = Astro.props as Props;
 										</span>
 										<br />
 										<span class="text-sm font-bold">
-											{Object.values(appointment["c"])[4]?.v}
+											{
+												Object.values(
+													appointment["c"]
+												)[4]?.v
+											}
 										</span>
 									</p>
 								</div>
@@ -286,7 +331,11 @@ const { title, subtitle, bodyCopy, appointments } = Astro.props as Props;
 										</span>
 										<br />
 										<span class="text-sm font-bold">
-											{Object.values(appointment["c"])[2]?.v}
+											{dateConvert(
+												Object.values(
+													appointment["c"]
+												)[2]?.v
+											)}
 										</span>
 									</p>
 									<p class="mb-2">
@@ -295,21 +344,41 @@ const { title, subtitle, bodyCopy, appointments } = Astro.props as Props;
 										</span>
 										<br />
 										<span class="text-sm font-bold">
-											{Object.values(appointment["c"])[3]?.v}
+											{timeConvert(
+												Object.values(
+													appointment["c"]
+												)[3]?.v
+											)}
 										</span>
 									</p>
 								</div>
 								<table class="w-full text-xs text-left rtl:text-right text-gray-500 dark:text-gray-400 mb-2">
 									<thead class="text-xs text-white uppercase bg-blue-700">
 										<tr>
-											<th scope="col" class="px-2 py-3">Umpire 1</th>
-											<th scope="col" class="px-2 py-3">Umpire 2</th>
+											<th scope="col" class="px-2 py-3">
+												Umpire 1
+											</th>
+											<th scope="col" class="px-2 py-3">
+												Umpire 2
+											</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr class="bg-blue-400 text-white">
-											<td class="px-2 py-3">{Object.values(appointment["c"])[8]?.v}</td>
-											<td class="px-2 py-3">{Object.values(appointment["c"])[9]?.v}</td>
+											<td class="px-2 py-3">
+												{
+													Object.values(
+														appointment["c"]
+													)[8]?.v
+												}
+											</td>
+											<td class="px-2 py-3">
+												{
+													Object.values(
+														appointment["c"]
+													)[9]?.v
+												}
+											</td>
 										</tr>
 									</tbody>
 								</table>
