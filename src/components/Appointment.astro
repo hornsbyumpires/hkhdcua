@@ -8,9 +8,11 @@ export interface Props {
 
 const { title, subtitle, bodyCopy, appointments } = Astro.props as Props;
 
-function dateConvert(data: string): string {
-	const match = data.match(/Date\((\d+),(\d+),(\d+)\)/);
-	if (match) {
+function dateConvert(date: string): string {
+	const match = date.match(/Date\((\d+),(\d+),(\d+)\)/);
+	if (match?.includes('1900')) {
+		return 'true';
+	} else if (match) {
 		const year = parseInt(match[1]);
 		const month = parseInt(match[2]) + 1;
 		const day = parseInt(match[3]);
@@ -18,7 +20,7 @@ function dateConvert(data: string): string {
 			.toString()
 			.padStart(2, "0")}`;
 	} else {
-		return "Invalid date string format.";
+		return "Invalid date format.";
 	}
 }
 function timeConvert(time: string): string {
@@ -34,10 +36,12 @@ function timeConvert(time: string): string {
 		const date = new Date(year, month, day, hour, minute, second);
 		const formattedTime = date.toLocaleTimeString("en-AU", {
 			hour12: true,
+			hour: '2-digit',
+			minute:'2-digit'
 		});
 		return formattedTime;
 	} else {
-		return "Invalid time string format.";
+		return "Invalid time format.";
 	}
 }
 ---
@@ -319,25 +323,44 @@ function timeConvert(time: string): string {
 											{
 												Object.values(
 													appointment["c"]
-												)[4]?.v
+												)[5]?.v
 											}
 										</span>
 									</p>
 								</div>
 								<div class="flex flex-row justify-between">
-									<p class="mb-2">
-										<span class="text-xs text-gray-800">
-											Date:
-										</span>
-										<br />
-										<span class="text-sm font-bold">
-											{dateConvert(
-												Object.values(
-													appointment["c"]
-												)[2]?.v
-											)}
-										</span>
-									</p>
+									<div class="flex flex-col justify-start">
+										<p class="mb-2">
+											<span class="text-xs text-gray-800">
+												Date:
+											</span>
+											<br />
+											<span class="text-sm font-bold">
+												{dateConvert(
+													Object.values(
+														appointment["c"]
+													)[2]?.v
+												)}
+											</span>
+										</p>
+										{ dateConvert(
+													Object.values(
+														appointment["c"]
+													)[3]?.v
+												) !== 'true' && <p class="mb-2">
+											<span class="text-xs text-gray-800">
+												Date:
+											</span>
+											<br />
+											<span class="text-sm font-bold">
+												{dateConvert(
+													Object.values(
+														appointment["c"]
+													)[3]?.v
+												)}
+											</span>
+										</p> }
+									</div>
 									<p class="mb-2">
 										<span class="text-xs text-gray-800">
 											Time:
@@ -347,7 +370,7 @@ function timeConvert(time: string): string {
 											{timeConvert(
 												Object.values(
 													appointment["c"]
-												)[3]?.v
+												)[4]?.v
 											)}
 										</span>
 									</p>
@@ -369,14 +392,14 @@ function timeConvert(time: string): string {
 												{
 													Object.values(
 														appointment["c"]
-													)[8]?.v
+													)[9]?.v
 												}
 											</td>
 											<td class="px-2 py-3">
 												{
 													Object.values(
 														appointment["c"]
-													)[9]?.v
+													)[10]?.v
 												}
 											</td>
 										</tr>
@@ -387,7 +410,7 @@ function timeConvert(time: string): string {
 										Venue:
 									</span>
 									<span class="text-xs font-bold">
-										{Object.values(appointment["c"])[7]?.v}
+										{Object.values(appointment["c"])[8]?.v}
 									</span>
 								</p>
 								<p class="mb-2 flex flex-row gap-1 justify-start items-center">
@@ -395,7 +418,7 @@ function timeConvert(time: string): string {
 										Home Team:
 									</span>
 									<span class="text-xs font-bold">
-										{Object.values(appointment["c"])[5]?.v}
+										{Object.values(appointment["c"])[6]?.v}
 									</span>
 								</p>
 								<p class="mb-2 flex flex-row gap-1 justify-start items-center">
@@ -403,7 +426,7 @@ function timeConvert(time: string): string {
 										Away Team:
 									</span>
 									<span class="text-xs font-bold">
-										{Object.values(appointment["c"])[6]?.v}
+										{Object.values(appointment["c"])[7]?.v}
 									</span>
 								</p>
 							</div>
