@@ -21,17 +21,10 @@
 		"target": "_blank"
 	},
 	{
-		"title": "Umpire Report form",
-		"image": "./src/asset/images/umpire-report.jpg",
-		"body": "A cricket umpire report is a comprehensive document detailing the events and decisions made during a cricket match. It serves as an official record of the game, providing a detailed account of the match's progress",
-		"link": "https://docs.google.com/forms/d/e/1FAIpQLScyujS2YPE--Px2Ns1Wiela4DFG21By_66U-wu2DJ_cwVDuvg/viewform",
-		"target": "_blank"
-	},
-	{
-		"title": "Captain’s Report form",
-		"image": "./src/asset/images/captain-report.jpg",
-		"body": "A cricket captain's report provides a comprehensive analysis of a team's match performance. It includes a match overview, team evaluation, individual highlights, areas for improvement, strategic analysis, and the captain's observations. This report is essential for team development and planning.",
-		"link": "https://docs.google.com/forms/d/e/1FAIpQLScGRh484KcXe22juMuZWnBkrC1LYoceDmfrg3bijcuNCBwNgA/viewform",
+		"title": "Stephen Fry MCC training videos",
+		"image": "./src/asset/images/mcc-laws.jpg",
+		"body": "Stephen Fry narrates a series of videos on the laws of cricket.",
+		"link": "www.youtube.com/watch?v=wjTHAFNvm7Q",
 		"target": "_blank"
 	},
 	{
