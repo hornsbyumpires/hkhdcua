@@ -1,5 +1,31 @@
 [
 	{
+		"title": "A Grade Grand Final Report 24/25",
+		"description": "The A Grade Grand Final was played between Berowra vs West Pennant Hills Cherrybrook at Berowra Oval on March 15 and 16, 2025",
+		"date": "Sep 30, 2025",
+		"image": {
+			"src": "./src/asset/images/A1-Grand-Final.jpg",
+			"alt": ""
+		},
+		"cta" :{
+			"text": "Read more",
+			"link": "/news/final-report-24-25"
+		}
+	},
+	{
+		"title": "Umpires Appointed to Finals 24/25",
+		"description": "The 2024/25 finals witnessed a stellar lineup of umpires. Seasoned veterans, renowned for their precision and composure, shared the field with rising stars demonstrating exceptional talent.",
+		"date": "Sep 30, 2025",
+		"image": {
+			"src": "./src/asset/images/news-umpire.jpg",
+			"alt": ""
+		},
+		"cta" :{
+			"text": "Read more",
+			"link": "/news/umpires-appointed-24-25"
+		}
+	},
+	{
 		"title": "A Grade Grand Final Report 23/24",
 		"description": "The A Grade Grand Final was played between Berowra Maroon and Berowra White at Berowra Oval on March 16 and 17, 2024",
 		"date": "April 25, 2024",

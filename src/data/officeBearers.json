@@ -1,26 +1,26 @@
 [
 	{
+		"name": "Tim Davidson",
+		"title": "President",
+		"mobile": "",
+		"email": "",
+		"image": "./src/asset/images/avator.jpg",
+		"description": ""
+	},
+	{
+		"name": "Steve Redman",
+		"title": "Vice-President",
+		"mobile": "0416 007 005",
+		"email": "steve.redman@live.com",
+		"image": "./src/asset/images/steve-r.jpg",
+		"description": ""
+	},
+	{
 		"name": "Ian Lewis",
-		"title": "President/ Examination",
+		"title": "Secretary",
 		"mobile": "0421 452 442",
 		"email": "iandalewis@iinet.net.au",
-		"image": "./src/asset/images/ian.png",
-		"description": ""
-	},
-	{
-		"name": "Geoff Hasler",
-		"title": "Vice-President/ Training /Examination",
-		"mobile": "0412 871 816",
-		"email": "geoffhasler70@gmail.com",
-		"image": "./src/asset/images/geoff.png",
-		"description": ""
-	},
-	{
-		"name": "Simon Moore",
-		"title": "Secretary",
-		"mobile": "0413 611 294",
-		"email": "simonmoore74@gmail.com",
-		"image": "./src/asset/images/simon.png",
+		"image": "./src/asset/images/avator.jpg",
 		"description": ""
 	},
 	{
@@ -37,6 +37,14 @@
 		"mobile": "0401 772 769",
 		"email": "williams88@live.com",
 		"image": "./src/asset/images/steve-williams.png",
+		"description": ""
+	},
+	{
+		"name": "Geoff Hasler",
+		"title": "Training/ Recruitment",
+		"mobile": "0412 871 816",
+		"email": "geoffhasler70@gmail.com",
+		"image": "./src/asset/images/geoff.png",
 		"description": ""
 	},
 	{
