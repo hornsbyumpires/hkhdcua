@@ -8,10 +8,13 @@ export interface Props {
 
 const { title, subtitle, bodyCopy, appointments } = Astro.props as Props;
 
-function dateConvert(date: string): string {
+function dateConvert(date: unknown): string {
+	if (typeof date !== "string") {
+		return "";
+	}
 	const match = date.match(/Date\((\d+),(\d+),(\d+)\)/);
-	if (match?.includes('1900')) {
-		return 'true';
+	if (match?.includes("1900")) {
+		return "true";
 	} else if (match) {
 		const year = parseInt(match[1]);
 		const month = parseInt(match[2]) + 1;
@@ -23,7 +26,8 @@ function dateConvert(date: string): string {
 		return "Invalid date format.";
 	}
 }
-function timeConvert(time: string): string {
+function timeConvert(time: unknown): string {
+	if (typeof time !== "string") return "";
 	const match = time.match(/Date\((\d+),(\d+),(\d+),(\d+),(\d+),(\d+)\)/);
 	if (match) {
 		const year = parseInt(match[1]);
@@ -36,8 +40,8 @@ function timeConvert(time: string): string {
 		const date = new Date(year, month, day, hour, minute, second);
 		const formattedTime = date.toLocaleTimeString("en-AU", {
 			hour12: true,
-			hour: '2-digit',
-			minute:'2-digit'
+			hour: "2-digit",
+			minute: "2-digit",
 		});
 		return formattedTime;
 	} else {
@@ -343,23 +347,24 @@ function timeConvert(time: string): string {
 												)}
 											</span>
 										</p>
-										{ dateConvert(
-													Object.values(
-														appointment["c"]
-													)[3]?.v
-												) !== 'true' && <p class="mb-2">
-											<span class="text-xs text-gray-800">
-												Date:
-											</span>
-											<br />
-											<span class="text-sm font-bold">
-												{dateConvert(
-													Object.values(
-														appointment["c"]
-													)[3]?.v
-												)}
-											</span>
-										</p> }
+										{dateConvert(
+											Object.values(appointment["c"])[3]
+												?.v
+										) !== "true" && (
+											<p class="mb-2">
+												<span class="text-xs text-gray-800">
+													Date:
+												</span>
+												<br />
+												<span class="text-sm font-bold">
+													{dateConvert(
+														Object.values(
+															appointment["c"]
+														)[3]?.v
+													)}
+												</span>
+											</p>
+										)}
 									</div>
 									<p class="mb-2">
 										<span class="text-xs text-gray-800">
