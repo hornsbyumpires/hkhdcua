@@ -2,45 +2,6 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import SecondryHero from "../components/SecondryHero.astro";
 import Appointment from "../components/Appointment.astro";
-
-const sheetID = "18GvoyOdac_AW9AgzMVoTjI7Qf8CfE4CLxn6XfbZI6Pk";
-const baseURL = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
-const sheetName = "appointment";
-const query = encodeURIComponent("Select *");
-const timestamp = Date.now();
-const uniqueParam = `&t=${timestamp}`;
-
-const url = `${baseURL}&sheet=${sheetName}&tq=${query}${uniqueParam}`;
-
-const response = await fetch(url);
-const data = await response.text();
-const appointments = JSON.parse(data.substring(47).slice(0, -2));
-
-function removeNull(obj: Record<string, any>): Record<string, any> {
-	return Object.fromEntries(
-		Object.entries(obj)
-			.filter(([_, value]) => value !== null)
-			.map(([key, value]) => [
-				key,
-				value === Object(value) ? removeNull(value) : value,
-			])
-	);
-}
-
-function removeEmptyObjects(obj: Record<string, any>): Record<string, any> {
-	return Object.fromEntries(
-		Object.entries(obj)
-			.filter(([_, value]) => Object.keys(value).length !== 0)
-			.map(([key, value]) => [
-				key,
-				value === Object(value) ? removeNull(value) : value,
-			])
-	);
-}
-
-const withoutNullAppointments = removeNull(appointments?.table?.rows);
-const withoutEmptyObjectsAppointments = removeEmptyObjects(withoutNullAppointments);
-
 ---
 
 <MainLayout
@@ -55,9 +16,8 @@ const withoutEmptyObjectsAppointments = removeEmptyObjects(withoutNullAppointmen
 		linkText=""
 	/>
 	<Appointment
-		title="Upcoming appointments for 25/26 session"
+		title="Upcoming appointments for the 26/27 season"
 		subtitle="Appointments"
 		bodyCopy="Here is the roster of scheduled officiating assignments for upcoming matches."
-		appointments={withoutEmptyObjectsAppointments}
 	/>
 </MainLayout>
