@@ -36,87 +36,122 @@ const { title, subtitle, bodyCopy } = Astro.props;
 
 	<div
 		id="appt-list"
-		class="grid gap-4 row-gap-5 sm:grid-cols-2 lg:grid-cols-4"
+		class="grid max-w-screen-xl gap-4 mx-auto sm:gap-5 sm:grid-cols-2 lg:grid-cols-3"
 	>
 	</div>
 </div>
 
 <!-- One blank card. The script copies it for each match and fills in the text. -->
 <template id="appt-card">
-	<div class="flex flex-col justify-between p-4 border rounded shadow-sm">
-		<div>
-			<div
-				class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-blue-50 p-2"
-			>
-				<img src="/cricket-ball.svg" alt="" class="w-12 h-12" />
+	<article
+		class="flex flex-col overflow-hidden text-gray-900 transition bg-white border border-gray-300 rounded-lg"
+	>
+		<div class="flex items-center justify-between gap-3 px-5 pt-4">
+			<div class="flex items-center gap-2">
+				<img src="/cricket-ball.svg" alt="" class="flex-none w-[22px] h-[22px]" />
+				<span
+					class="px-2 py-1 text-xs font-bold tracking-wide text-white bg-blue-900 rounded"
+					data-field="grade"></span>
 			</div>
-			<div class="flex flex-row justify-between border-b-2 mb-2">
-				<p class="mb-2">
-					<span class="text-xs text-gray-800">Grade:</span><br />
-					<span class="text-sm font-bold" data-field="grade"></span>
-				</p>
-				<p class="mb-2">
-					<span class="text-xs text-gray-800">Game Type:</span><br />
-					<span class="text-sm font-bold" data-field="gameType"
-					></span>
-				</p>
-				<p class="mb-2">
-					<span class="text-xs text-gray-800">Round:</span><br />
-					<span class="text-sm font-bold" data-field="round"></span>
-				</p>
-			</div>
-			<div class="flex flex-row justify-between">
-				<p class="mb-2">
-					<span class="text-xs text-gray-800">Date:</span><br />
-					<span class="text-sm font-bold" data-field="dates"></span>
-				</p>
-				<p class="mb-2">
-					<span class="text-xs text-gray-800">Time:</span><br />
-					<span class="text-sm font-bold" data-field="time"></span>
-				</p>
-			</div>
-			<table
-				class="w-full text-xs text-left rtl:text-right text-gray-500 dark:text-gray-400 mb-2"
-			>
-				<thead class="text-xs text-white uppercase bg-blue-700">
-					<tr>
-						<th scope="col" class="px-2 py-3">Umpire 1</th>
-						<th scope="col" class="px-2 py-3">Umpire 2</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr class="bg-blue-400 text-white">
-						<td class="px-2 py-3" data-field="ump1"></td>
-						<td class="px-2 py-3" data-field="ump2"></td>
-					</tr>
-				</tbody>
-			</table>
-			<p class="mb-2 flex flex-row gap-1 justify-start items-center">
-				<span class="text-xs text-gray-800">Venue:</span>
-				<span class="text-xs font-bold" data-field="ground"></span>
-			</p>
-			<p class="mb-2 flex flex-row gap-1 justify-start items-center">
-				<span class="text-xs text-gray-800">Home Team:</span>
-				<span class="text-xs font-bold" data-field="home"></span>
-			</p>
-			<p class="mb-2 flex flex-row gap-1 justify-start items-center">
-				<span class="text-xs text-gray-800">Away Team:</span>
-				<span class="text-xs font-bold" data-field="away"></span>
-			</p>
+			<span
+				class="text-xs font-semibold tracking-widest text-right text-gray-600 uppercase"
+				data-field="matchPlay"></span>
 		</div>
-	</div>
+
+		<p class="px-5 pt-4 text-sm font-bold text-blue-700">
+			<span data-field="dates"></span>
+			<small class="block mt-0.5 text-xs font-medium text-gray-600" data-field="twoDay">
+				Two days, same ground
+			</small>
+		</p>
+
+		<h3 class="grid gap-1 px-5 pt-3">
+			<span class="text-[19px] font-bold leading-tight [text-wrap:balance]" data-field="home"></span>
+			<span
+				class="flex items-center gap-2.5 text-xs font-semibold text-gray-600 after:content-[''] after:flex-1 after:h-px after:bg-gray-300"
+				>v</span
+			>
+			<span class="text-[19px] font-bold leading-tight [text-wrap:balance]" data-field="away"></span>
+		</h3>
+
+		<ul class="grid gap-2 px-5 pt-4 pb-5 text-sm text-gray-700">
+			<li class="flex items-start gap-2.5">
+				<svg
+					class="flex-none w-4 h-4 mt-0.5 text-blue-700"
+					viewBox="0 0 16 16"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.6"
+					aria-hidden="true"
+				>
+					<circle cx="8" cy="8" r="6.5"></circle>
+					<path d="M8 4.5V8l2.5 1.5" stroke-linecap="round"></path>
+				</svg>
+				<span class="flex flex-wrap tabular-nums gap-x-3">
+					<span><span class="text-gray-600">Start</span> <span data-field="start"></span></span>
+					<span><span class="text-gray-600">Finish</span> <span data-field="end"></span></span>
+				</span>
+			</li>
+			<li class="flex items-start gap-2.5">
+				<svg
+					class="flex-none w-4 h-4 mt-0.5 text-blue-700"
+					viewBox="0 0 16 16"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.6"
+					aria-hidden="true"
+				>
+					<path d="M8 14.5s4.8-4.3 4.8-8a4.8 4.8 0 1 0-9.6 0c0 3.7 4.8 8 4.8 8Z"></path>
+					<circle cx="8" cy="6.5" r="1.7"></circle>
+				</svg>
+				<span data-field="ground"></span>
+			</li>
+		</ul>
+
+		<div class="px-5 pt-3.5 pb-4 mt-auto border-t border-blue-100 bg-blue-50">
+			<p
+				class="text-[11px] font-bold tracking-widest text-blue-900 uppercase"
+				data-field="umpsLabel"
+			>
+			</p>
+			<ul class="grid gap-2 mt-2.5" data-field="umps"></ul>
+		</div>
+	</article>
+</template>
+
+<!-- One umpire line. The script fills in the initials and the name. -->
+<template id="appt-ump">
+	<li class="flex items-center gap-2.5 text-sm font-semibold">
+		<span
+			class="grid flex-none text-[11px] font-bold tracking-wide text-white bg-blue-900 rounded-full w-7 h-7 place-items-center ring-2 ring-white"
+			data-field="initials"></span>
+		<span data-field="name"></span>
+	</li>
+</template>
+
+<!-- An umpire who hasn't been appointed yet (a blank cell). -->
+<template id="appt-ump-tbc">
+	<li class="flex items-center gap-2.5 text-sm">
+		<span
+			class="grid flex-none text-[11px] font-bold text-gray-600 bg-white border border-gray-600 border-dashed rounded-full w-7 h-7 place-items-center"
+			>?</span
+		>
+		<span class="italic font-medium text-gray-600">To be confirmed</span>
+	</li>
 </template>
 
 <script>
 	// The published CSV link from File → Share → Publish to web.
 	const CSV_URL =
-		"https://docs.google.com/spreadsheets/d/e/2PACX-1vQG730S_zxeaZmqMXGNB5lNEvrSGII0_v4twTvKi6OdkjTHT_TM8WXyheC2pPVuaW1BpeGoTtWMcZDN/pub?gid=0&single=true&output=csv";
+		"https://docs.google.com/spreadsheets/d/e/2PACX-1vQFvFKj9Ai7sjtbhRs6couBuKNdd7liFjgvSll-VbKoB1zUkl_1sFEaRpvgAOpz7ixvPeXrPn6NgdUT/pub?gid=0&single=true&output=csv";
 
 	const status = document.getElementById("appt-status")!;
 	const list = document.getElementById("appt-list")!;
-	const template = document.getElementById(
-		"appt-card"
-	) as HTMLTemplateElement;
+	const template = document.getElementById("appt-card") as HTMLTemplateElement;
+	const umpTemplate = document.getElementById("appt-ump") as HTMLTemplateElement;
+	const umpTbcTemplate = document.getElementById("appt-ump-tbc") as HTMLTemplateElement;
+
+	const MONTHS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
 
 	// Turns CSV text into rows of cells.
 	// Handles commas inside quotes, e.g. "Smith Oval, Pennant Hills".
@@ -156,26 +191,68 @@ const { title, subtitle, bodyCopy } = Astro.props;
 		return rows;
 	}
 
-	// Reads "Sat 8/11/2025" or "8/11/2025". Returns null if it isn't a real date,
-	// e.g. a US-style "9/27/2025".
-	function parseDate(text: string): Date | null {
-		const m = text.match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
-		if (!m) return null;
-		const day = Number(m[1]);
-		const month = Number(m[2]) - 1;
-		const date = new Date(Number(m[3]), month, day);
-		return date.getDate() === day && date.getMonth() === month
-			? date
-			: null;
+	// A date with no year belongs to the current cricket season:
+	// July–December is the season's first year, January–June the next.
+	function seasonYear(month: number): number {
+		const now = new Date();
+		const seasonStart = now.getMonth() >= 6 ? now.getFullYear() : now.getFullYear() - 1;
+		return month >= 6 ? seasonStart : seasonStart + 1;
 	}
 
-	// "Sat 8 Nov"
+	// Reads "19-Sep", "19 Sep 2026", "19/9/2026" or "Sat 19/9/2026".
+	// Returns null for anything else, e.g. "N/a" or a US-style "9/27/2025".
+	function parseDate(text: string): Date | null {
+		let day: number;
+		let month: number;
+		let year: number | null = null;
+
+		const numeric = text.match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+		const named = text.match(/(\d{1,2})[\s-]+([A-Za-z]{3})[a-z]*(?:[\s-]+(\d{4}))?/);
+
+		if (numeric) {
+			day = Number(numeric[1]);
+			month = Number(numeric[2]) - 1;
+			year = Number(numeric[3]);
+		} else if (named) {
+			day = Number(named[1]);
+			month = MONTHS.indexOf(named[2].toLowerCase());
+			if (month === -1) return null;
+			if (named[3]) year = Number(named[3]);
+		} else {
+			return null;
+		}
+
+		if (year === null) year = seasonYear(month);
+		const date = new Date(year, month, day);
+		return date.getDate() === day && date.getMonth() === month ? date : null;
+	}
+
+	// "Sat 19 Sep"
 	function formatDate(date: Date): string {
 		return date.toLocaleDateString("en-AU", {
 			weekday: "short",
 			day: "numeric",
 			month: "short",
 		});
+	}
+
+	// "Jenny Nguyen" → "JN"
+	function initials(name: string): string {
+		return name
+			.split(/\s+/)
+			.map((word) => word[0])
+			.join("")
+			.slice(0, 2)
+			.toUpperCase();
+	}
+
+	// One umpire line: an initials badge and the name, or "To be confirmed" if blank.
+	function umpireItem(name: string): DocumentFragment {
+		if (!name) return umpTbcTemplate.content.cloneNode(true) as DocumentFragment;
+		const item = umpTemplate.content.cloneNode(true) as DocumentFragment;
+		item.querySelector('[data-field="initials"]')!.textContent = initials(name);
+		item.querySelector('[data-field="name"]')!.textContent = name;
+		return item;
 	}
 
 	async function load() {
@@ -187,35 +264,29 @@ const { title, subtitle, bodyCopy } = Astro.props;
 
 			const [headings, ...rows] = parseCsv(await response.text());
 
-			// Find each column by its heading, so the secretary can move columns.
-			const col = (name: string) =>
-				headings.findIndex((h) => h.trim().toUpperCase() === name);
-			const get = (row: string[], name: string) =>
-				(row[col(name)] ?? "").trim();
+			// Find each column by its heading, so columns can be moved.
+			// Ignores case and extra spaces, e.g. "umpire  1" still matches.
+			const tidy = (h: string) => h.trim().toUpperCase().replace(/\s+/g, " ");
+			const col = (name: string) => headings.findIndex((h) => tidy(h) === name);
+			const get = (row: string[], name: string) => (row[col(name)] ?? "").trim();
 
-			if (
-				col("DATE") === -1 ||
-				col("HOME") === -1 ||
-				col("AWAY") === -1
-			) {
-				throw new Error(
-					"The sheet is missing a DATE, HOME or AWAY heading."
-				);
+			if (col("DAY 1") === -1 || col("HOME") === -1 || col("AWAY") === -1) {
+				throw new Error("The sheet is missing a Day 1, Home or Away heading.");
 			}
 
 			const today = new Date();
-			today.setHours(0, 0, 0, 0);
+			today.setMonth(today.getMonth() - 1); // TEMP: remove before committing
+
+			// today.setHours(0, 0, 0, 0);
+			// today.setDate(today.getDate() - 1); // Keep yesterday's games for one extra day
 
 			const matches = rows
 				// Skip blank rows.
-				.filter(
-					(row) =>
-						get(row, "DATE") || get(row, "HOME") || get(row, "AWAY")
-				)
+				.filter((row) => get(row, "DAY 1") || get(row, "HOME") || get(row, "AWAY"))
 				.map((row) => ({
 					row,
-					day1: parseDate(get(row, "DATE")),
-					day2: parseDate(get(row, "DAY 2")),
+					day1: parseDate(get(row, "DAY 1")),
+					day2: parseDate(get(row, "DAY 2")), // "N/a" → no second day
 				}))
 				// Hide games whose last day has passed. Keep rows with unreadable dates.
 				.filter(({ day1, day2 }) => {
@@ -223,11 +294,7 @@ const { title, subtitle, bodyCopy } = Astro.props;
 					return !lastDay || lastDay >= today;
 				})
 				// Earliest first. Unreadable dates go last.
-				.sort(
-					(a, b) =>
-						(a.day1?.getTime() ?? 9e15) -
-						(b.day1?.getTime() ?? 9e15)
-				);
+				.sort((a, b) => (a.day1?.getTime() ?? 9e15) - (b.day1?.getTime() ?? 9e15));
 
 			if (matches.length === 0) {
 				status.textContent = "No upcoming appointments.";
@@ -235,32 +302,33 @@ const { title, subtitle, bodyCopy } = Astro.props;
 			}
 
 			for (const { row, day1, day2 } of matches) {
-				const card = template.content.cloneNode(
-					true
-				) as DocumentFragment;
+				const card = template.content.cloneNode(true) as DocumentFragment;
 
 				// Blank cells show as "TBC".
 				const set = (field: string, value: string) => {
-					card.querySelector(`[data-field="${field}"]`)!.textContent =
-						value || "TBC";
+					card.querySelector(`[data-field="${field}"]`)!.textContent = value || "TBC";
 				};
 
-				let dates = get(row, "DATE");
-				if (day1)
-					dates = day2
-						? `${formatDate(day1)} & ${formatDate(day2)}`
-						: formatDate(day1);
+				let dates = get(row, "DAY 1");
+				if (day1) dates = day2 ? `${formatDate(day1)} & ${formatDate(day2)}` : formatDate(day1);
 
 				set("grade", get(row, "GRADE"));
-				set("gameType", get(row, "GAME TYPE"));
-				set("round", get(row, "ROUND"));
+				set("matchPlay", get(row, "MATCH PLAY"));
 				set("dates", dates);
-				set("time", get(row, "TIME"));
-				set("ump1", get(row, "UMP1"));
-				set("ump2", get(row, "UMP2"));
+				if (!day2) card.querySelector('[data-field="twoDay"]')!.remove();
+				set("start", get(row, "START TIME"));
+				set("end", get(row, "END TIME"));
 				set("ground", get(row, "GROUND"));
 				set("home", get(row, "HOME"));
 				set("away", get(row, "AWAY"));
+
+				// "None" means a one-umpire game, so the second umpire isn't listed.
+				// A blank cell means not appointed yet, so it shows "To be confirmed".
+				const umpires = [get(row, "UMPIRE 1"), get(row, "UMPIRE 2")];
+				if (umpires[1].toLowerCase() === "none") umpires.pop();
+				card.querySelector('[data-field="umpsLabel"]')!.textContent =
+					umpires.length > 1 ? "Umpires" : "Umpire";
+				card.querySelector('[data-field="umps"]')!.append(...umpires.map(umpireItem));
 
 				list.append(card);
 			}
@@ -268,8 +336,7 @@ const { title, subtitle, bodyCopy } = Astro.props;
 			status.textContent = "";
 		} catch (error) {
 			console.error(error);
-			status.textContent =
-				"Sorry, the appointments couldn't be loaded. Please try again later.";
+			status.textContent = "Sorry, the appointments couldn't be loaded. Please try again later.";
 		}
 	}
 
