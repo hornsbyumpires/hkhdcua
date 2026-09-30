@@ -54,7 +54,7 @@ const { title, subtitle, bodyCopy } = Astro.props;
 			id="appt-list"
 			role="table"
 			aria-label="Umpire appointments"
-			class="grid gap-3 lg:gap-0 lg:border lg:border-gray-300 lg:rounded-lg lg:overflow-hidden"
+			class="grid gap-4 lg:gap-0 lg:border lg:border-gray-300 lg:rounded-lg lg:overflow-hidden"
 		>
 			<!-- Column widths must match the row template below. -->
 			<div
@@ -77,56 +77,57 @@ const { title, subtitle, bodyCopy } = Astro.props;
 </div>
 
 <!-- One blank row. The script copies it for each match and fills in the text.
-     Column widths must match the table header above. -->
+     Column widths must match the table header above.
+     On phones the row is a card: a blue strip with the date and grade, then the details.
+     On large screens the two wrapper divs use lg:contents, so their cells line up
+     in the table columns. -->
 <template id="appt-row">
 	<div
 		role="row"
-		class="grid items-start grid-cols-2 px-4 text-sm text-gray-800 bg-white border border-gray-300 gap-x-4 gap-y-2.5 py-3.5 rounded-lg lg:grid-cols-[150px_110px_minmax(0,1.5fr)_minmax(0,1.2fr)_150px_minmax(0,1fr)] lg:gap-4 lg:px-5 lg:rounded-none lg:border-0 lg:border-t lg:odd:bg-gray-50"
+		class="grid overflow-hidden text-sm text-gray-800 bg-white border border-gray-300 rounded-lg lg:grid-cols-[150px_110px_minmax(0,1.5fr)_minmax(0,1.2fr)_150px_minmax(0,1fr)] lg:items-start lg:gap-4 lg:px-5 lg:py-3.5 lg:rounded-none lg:border-0 lg:border-t lg:odd:bg-gray-50"
 	>
-		<div role="cell" class="grid min-w-0 gap-0.5">
-			<span class="font-bold text-gray-900" data-field="day1"></span>
-			<span class="text-xs font-medium text-gray-600" data-field="day2"></span>
-		</div>
-
-		<div role="cell" class="grid min-w-0 gap-0.5 justify-items-end text-right lg:justify-items-start lg:text-left">
-			<span
-				class="px-2 py-0.5 text-xs font-bold text-blue-900 whitespace-nowrap rounded bg-blue-50"
-				data-field="grade"></span>
-			<span class="text-xs text-gray-600" data-field="matchPlay"></span>
-		</div>
-
-		<div role="cell" class="min-w-0 col-span-2 lg:col-span-1">
-			<span class="text-base font-bold leading-snug text-gray-900 lg:text-sm">
-				<span data-field="home"></span>
-				<span class="font-medium text-gray-600">v</span>
-				<span data-field="away"></span>
-			</span>
-		</div>
-
 		<div
-			role="cell"
-			class="grid min-w-0 col-span-2 grid-cols-[64px_1fr] items-baseline gap-2 lg:col-span-1 lg:grid-cols-1 lg:gap-0.5"
+			class="flex items-start justify-between gap-4 px-4 py-2.5 bg-blue-accent-400 lg:contents"
 		>
-			<span class="text-xs text-gray-500 lg:hidden">Ground</span>
-			<span data-field="ground"></span>
+			<div role="cell" class="grid min-w-0 gap-0.5">
+				<span class="font-bold text-white lg:text-gray-900" data-field="day1"></span>
+				<span class="text-xs font-medium text-blue-50 lg:text-gray-600" data-field="day2"></span>
+			</div>
+
+			<div role="cell" class="grid min-w-0 gap-0.5 justify-items-end text-right lg:justify-items-start lg:text-left">
+				<span
+					class="px-2 py-0.5 text-xs font-bold text-blue-900 whitespace-nowrap bg-white rounded lg:bg-blue-50"
+					data-field="grade"></span>
+				<span class="text-xs text-blue-50 lg:text-gray-600" data-field="matchPlay"></span>
+			</div>
 		</div>
 
-		<div
-			role="cell"
-			class="grid min-w-0 col-span-2 grid-cols-[64px_1fr] items-baseline gap-2 lg:col-span-1 lg:grid-cols-1 lg:gap-0.5"
-		>
-			<span class="text-xs text-gray-500 lg:hidden">Time</span>
-			<span class="tabular-nums" data-field="times"></span>
-		</div>
+		<div class="grid gap-2.5 px-4 py-3.5 lg:contents">
+			<div role="cell" class="min-w-0">
+				<span class="text-base font-bold leading-snug text-gray-900 lg:text-sm">
+					<span data-field="home"></span>
+					<span class="font-medium text-gray-600">v</span>
+					<span data-field="away"></span>
+				</span>
+			</div>
 
-		<div
-			role="cell"
-			class="grid min-w-0 col-span-2 grid-cols-[64px_1fr] items-baseline gap-2 pt-2.5 border-t border-gray-300 border-dashed lg:col-span-1 lg:grid-cols-1 lg:gap-0.5 lg:pt-0 lg:border-0"
-		>
-			<span
-				class="text-xs text-gray-500 lg:hidden"
-				data-field="umpsLabel"></span>
-			<ul class="grid gap-0.5 font-semibold text-gray-900" data-field="umps"></ul>
+			<div role="cell" class="grid min-w-0 grid-cols-[64px_1fr] items-baseline gap-2 lg:grid-cols-1 lg:gap-0.5">
+				<span class="text-xs text-gray-500 lg:hidden">Ground</span>
+				<span data-field="ground"></span>
+			</div>
+
+			<div role="cell" class="grid min-w-0 grid-cols-[64px_1fr] items-baseline gap-2 lg:grid-cols-1 lg:gap-0.5">
+				<span class="text-xs text-gray-500 lg:hidden">Time</span>
+				<span class="tabular-nums" data-field="times"></span>
+			</div>
+
+			<div
+				role="cell"
+				class="grid min-w-0 grid-cols-[64px_1fr] items-baseline gap-2 pt-2.5 border-t border-gray-200 lg:grid-cols-1 lg:gap-0.5 lg:pt-0 lg:border-0"
+			>
+				<span class="text-xs text-gray-500 lg:hidden" data-field="umpsLabel"></span>
+				<ul class="grid gap-0.5 font-semibold text-gray-900" data-field="umps"></ul>
+			</div>
 		</div>
 	</div>
 </template>
@@ -143,8 +144,9 @@ const { title, subtitle, bodyCopy } = Astro.props;
 	const count = document.getElementById("appt-count")!;
 	const template = document.getElementById("appt-row") as HTMLTemplateElement;
 
-	// Rows that match "Find your name" get a blue bar down the left edge.
-	const HIT_CLASS = "shadow-[inset_4px_0_0_#2979ff]";
+	// On large screens, rows that match "Find your name" get a blue bar down the left edge.
+	// Phones skip it: the card's blue strip would cover the top of the bar.
+	const HIT_CLASS = "lg:shadow-[inset_4px_0_0_#2979ff]";
 
 	const MONTHS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
 
