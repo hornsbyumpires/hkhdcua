@@ -143,7 +143,7 @@ const { title, subtitle, bodyCopy } = Astro.props;
 <script>
 	// The published CSV link from File → Share → Publish to web.
 	const CSV_URL =
-		"https://docs.google.com/spreadsheets/d/e/2PACX-1vQFvFKj9Ai7sjtbhRs6couBuKNdd7liFjgvSll-VbKoB1zUkl_1sFEaRpvgAOpz7ixvPeXrPn6NgdUT/pub?gid=0&single=true&output=csv";
+		"https://docs.google.com/spreadsheets/d/e/2PACX-1vScRb9q7SLrToTA7hyNoVOi5NpEpk5CwHv8_LFujlPjdUrIDmoPGofVJaVqWfB2CQRaHo_JL8d7HY5a/pub?gid=0&single=true&output=csv";
 
 	const status = document.getElementById("appt-status")!;
 	const list = document.getElementById("appt-list")!;
@@ -275,10 +275,10 @@ const { title, subtitle, bodyCopy } = Astro.props;
 			}
 
 			const today = new Date();
-			today.setMonth(today.getMonth() - 1); // TEMP: remove before committing
+			// today.setMonth(today.getMonth() - 1); // TEMP: remove before committing
 
-			// today.setHours(0, 0, 0, 0);
-			// today.setDate(today.getDate() - 1); // Keep yesterday's games for one extra day
+			today.setHours(0, 0, 0, 0);
+			today.setDate(today.getDate() - 1); // Keep yesterday's games for one extra day
 
 			const matches = rows
 				// Skip blank rows.
