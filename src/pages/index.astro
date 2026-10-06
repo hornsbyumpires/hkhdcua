@@ -1,6 +1,6 @@
 ---
 // Data import
-import news from "../data/news-home.json";
+import { getNews, toCard } from "../lib/news";
 
 import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/Hero.astro";
@@ -9,6 +9,8 @@ import Join from "../components/Join.astro";
 import News from "../components/News.astro";
 import Sponsors from "../components/Sponsors.astro";
 import Awards from "../components/Awards.astro";
+
+const news = (await getNews()).slice(0, 3).map(toCard);
 ---
 
 <MainLayout
