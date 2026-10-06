@@ -20,58 +20,46 @@ const { Content } = await entry.render();
 ---
 
 <MainLayout title={`${title} | Hornsby Ku-ring-gai & Hills District Cricket Umpires Association`}>
-	<article
-		class="border-t-2 px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
-	>
-		<div class="grid gap-10 lg:grid-cols-2">
-			<div class="lg:max-w-lg">
-				<p class="mb-2 text-xs font-semibold text-gray-600 uppercase">
-					<time datetime={date.toISOString()}>{formatDate(date)}</time>
-				</p>
-				<h1
-					class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none"
-				>
-					{title}
-				</h1>
-				<div class="news-body text-base text-gray-700">
-					<Content />
-				</div>
-			</div>
-			<div>
-				<Picture
-					src={image}
-					alt={alt || description}
-					widths={[400, 800, 1200]}
-					sizes="(max-width: 1024px) 100vw, 600px"
-					aspectRatio="4:3"
-					class:list={"object-cover w-full rounded shadow-lg"}
-				/>
-			</div>
+	<article class="border-t-2 px-4 py-16 mx-auto max-w-3xl md:px-8 lg:py-20">
+		<p class="mb-2 text-xs font-semibold text-gray-600 uppercase">
+			<time datetime={date.toISOString()}>{formatDate(date)}</time>
+		</p>
+		<h1 class="mb-8 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-tight">
+			{title}
+		</h1>
+
+		<div class="mb-10 overflow-hidden rounded shadow-lg aspect-[16/9]">
+			<Picture
+				src={image}
+				alt={alt || description}
+				widths={[400, 800, 1200]}
+				sizes="(max-width: 768px) 100vw, 768px"
+				aspectRatio="16:9"
+				class:list={"w-full h-full object-cover"}
+			/>
 		</div>
+
+		<div class="news-body text-lg leading-relaxed text-gray-700">
+			<Content />
+		</div>
+
 		{
 			gallery.length > 0 && (
-				<div class="grid gap-4 mt-12 sm:grid-cols-2 lg:grid-cols-3">
+				<div class="grid grid-cols-2 gap-4 mt-12 sm:grid-cols-3">
 					{gallery.map((src) => (
-						<Picture
-							src={src}
-							alt=""
-							widths={[400, 800]}
-							sizes="(max-width: 640px) 100vw, 400px"
-							aspectRatio="1:1"
-							class:list={"object-cover w-full rounded shadow-lg"}
-						/>
+						<div class="overflow-hidden rounded shadow aspect-square">
+							<Picture
+								src={src}
+								alt=""
+								widths={[300, 600]}
+								sizes="(max-width: 640px) 50vw, 250px"
+								aspectRatio="1:1"
+								class:list={"w-full h-full object-cover"}
+							/>
+						</div>
 					))}
 				</div>
 			)
 		}
 	</article>
 </MainLayout>
-
-<style>
-	.news-body :global(p) { margin-bottom: 1rem; }
-	.news-body :global(h2) { font-size: 1.5rem; font-weight: 700; margin: 1.5rem 0 0.75rem; }
-	.news-body :global(h3) { font-size: 1.25rem; font-weight: 700; margin: 1.25rem 0 0.5rem; }
-	.news-body :global(ul) { list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
-	.news-body :global(ol) { list-style: decimal; padding-left: 1.5rem; margin-bottom: 1rem; }
-	.news-body :global(a) { color: #1d4ed8; text-decoration: underline; }
-</style>
