@@ -1,6 +1,7 @@
 media:
   input: src/asset/images/news
   output: ./src/asset/images/news
+  extensions: [jpg, jpeg, png, webp]
 
 content:
   - name: news
@@ -19,6 +20,12 @@ content:
       - { name: description, label: Short summary (shown on cards), type: text }
       - { name: image, label: Cover photo, type: image }
       - { name: alt, label: Describe the photo, type: string }
+      - name: focus
+        label: Keep in frame when cropping
+        type: select
+        default: top
+        options:
+          values: [top, center, bottom]
       - { name: gallery, label: Event photos, type: image, list: true }
       - { name: link, type: string, hidden: true }
       - { name: body, label: Article, type: rich-text }

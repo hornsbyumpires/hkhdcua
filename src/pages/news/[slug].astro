@@ -1,7 +1,7 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import { Picture } from "@astrojs/image/components";
-import { getNews, formatDate, type NewsEntry } from "../../lib/news";
+import { getNews, formatDate, ratioOf, type NewsEntry } from "../../lib/news";
 
 export async function getStaticPaths() {
 	const entries = await getNews();
@@ -17,6 +17,12 @@ interface Props {
 const { entry } = Astro.props;
 const { title, date, image, alt, gallery, description } = entry.data;
 const { Content } = await entry.render();
+
+// Natural shapes, so photos are never cropped or stretched on the article page
+const coverRatio = await ratioOf(image);
+const galleryItems = await Promise.all(
+	gallery.map(async (src) => ({ src, ratio: await ratioOf(src) }))
+);
 ---
 
 <MainLayout title={`${title} | Hornsby Ku-ring-gai & Hills District Cricket Umpires Association`}>
@@ -28,14 +34,14 @@ const { Content } = await entry.render();
 			{title}
 		</h1>
 
-		<div class="mb-10 overflow-hidden rounded shadow-lg aspect-[16/9]">
+		<div class="mb-10 overflow-hidden rounded shadow-lg">
 			<Picture
 				src={image}
 				alt={alt || description}
 				widths={[400, 800, 1200]}
 				sizes="(max-width: 768px) 100vw, 768px"
-				aspectRatio="16:9"
-				class:list={"w-full h-full object-cover"}
+				aspectRatio={coverRatio}
+				class:list={"w-full h-auto"}
 			/>
 		</div>
 
@@ -44,17 +50,17 @@ const { Content } = await entry.render();
 		</div>
 
 		{
-			gallery.length > 0 && (
-				<div class="grid grid-cols-2 gap-4 mt-12 sm:grid-cols-3">
-					{gallery.map((src) => (
-						<div class="overflow-hidden rounded shadow aspect-square">
+			galleryItems.length > 0 && (
+				<div class="mt-12 gap-4 columns-2 sm:columns-3">
+					{galleryItems.map(({ src, ratio }) => (
+						<div class="mb-4 overflow-hidden rounded shadow break-inside-avoid">
 							<Picture
 								src={src}
 								alt=""
 								widths={[300, 600]}
 								sizes="(max-width: 640px) 50vw, 250px"
-								aspectRatio="1:1"
-								class:list={"w-full h-full object-cover"}
+								aspectRatio={ratio}
+								class:list={"w-full h-auto"}
 							/>
 						</div>
 					))}
@@ -63,3 +69,12 @@ const { Content } = await entry.render();
 		}
 	</article>
 </MainLayout>
+
+<style>
+	.news-body :global(p) { margin-bottom: 1.25em; }
+	.news-body :global(h2) { font-size: 1.5rem; font-weight: 700; margin: 2em 0 0.75em; color: #111827; }
+	.news-body :global(h3) { font-size: 1.25rem; font-weight: 700; margin: 1.5em 0 0.5em; color: #111827; }
+	.news-body :global(ul) { list-style: disc; padding-left: 1.5rem; margin-bottom: 1.25em; }
+	.news-body :global(ol) { list-style: decimal; padding-left: 1.5rem; margin-bottom: 1.25em; }
+	.news-body :global(a) { color: #1d4ed8; text-decoration: underline; }
+</style>

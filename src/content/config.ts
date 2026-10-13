@@ -5,13 +5,16 @@ const news = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		date: z.coerce.date(),
-		description: z.string().default(""),
-		// Fallback keeps the build green if an editor skips the cover photo
-		image: z.string().default("./src/asset/images/news.jpg"),
-		alt: z.string().default(""),
-		gallery: z.array(z.string()).default([]),
+		description: z.string().nullish().transform((v) => v ?? ""),
+		image: z.string().nullish().transform((v) => v || "./src/asset/images/news.jpg"),
+		alt: z.string().nullish().transform((v) => v ?? ""),
+		gallery: z
+			.array(z.string().nullish())
+			.nullish()
+			.transform((a) => (a ?? []).filter((s): s is string => !!s)),
 		// Set only for hand-built legacy pages that live in src/pages/news/*.astro
 		link: z.string().optional(),
+		focus: z.enum(["top", "center", "bottom"]).default("top"),
 	}),
 });
 
