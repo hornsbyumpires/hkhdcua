@@ -8,6 +8,8 @@ description: |-
 image: ./src/asset/images/news/image-1.jpg
 alt: This is a test phto
 focus: center
+gallery:
+  - ./src/asset/images/news/image-2.jpg
 ---
 This is the actual article
 
