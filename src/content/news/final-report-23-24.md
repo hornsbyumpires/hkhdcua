@@ -1,14 +1,14 @@
 ---
-title: "A Grade Grand Final Report 23/24"
+title: A Grade Grand Final Report 23/24
 date: 2024-04-25
-description: "The A Grade Grand Final was played between Berowra Maroon and Berowra White at Berowra Oval on March 16 and 17, 2024"
-image: "./src/asset/images/a-grade-final.jpg"
-alt: ""
+description: The A Grade Grand Final was played between Berowra Maroon and
+  Berowra White at Berowra Oval on March 16 and 17, 2024
+image: src/asset/images/a-grade-final.jpg
+focus: top
 gallery:
-  - "./src/asset/images/a-grade-report.jpg"
-  - "./src/asset/images/wining-team.jpg"
+  - src/asset/images/a-grade-report.jpg
+  - src/asset/images/wining-team.jpg
 ---
-
 The A Grade Grand Final was played between Berowra Maroon and Berowra White at Berowra Oval on 16th and 17th March, 2024, Umpires are Geoff Hasler & Simon Moore
 
 The A Grade Grand Final was played between minor premiers, Berowra White and the runners up, Berowra Maroon. The Maroon captain, Will Fiedler won the toss and sent the White team in to bat.
@@ -35,4 +35,4 @@ Not out overnight, Will Fiedler scored 24, backed up by Callum Birrel, 17, and B
 
 The White Team Captain, Andam West conceded at the second drinks break with the Maroon side 9 for 176. Joe Robinson took 4 for 37 off 22 overs, supported by Nicholas McMillan with 2 for 11 off 8 overs and Mark Tobin with 2 for 23 off 11.
 
-A fine win to the Berowra Maroon side, well led by Will Fiedler.Undoubtedly, the man of the match was Brody Collier. The Berowra White side is a young side and will be improved by the experience.
+A fine win to the Berowra Maroon side, well led by Will Fiedler. Undoubtedly, the man of the match was Brody Collier. The Berowra White side is a young side and will be improved by the experience.
