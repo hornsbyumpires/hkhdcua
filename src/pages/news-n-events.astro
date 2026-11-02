@@ -1,10 +1,12 @@
 ---
 // Data import
-import news from "../data/news-page.json";
+import { getNews, toCard } from "../lib/news";
 
 import MainLayout from "../layouts/MainLayout.astro";
 import SecondryHero from "../components/SecondryHero.astro";
 import News from "../components/News.astro";
+
+const news = (await getNews()).map(toCard);
 ---
 
 <MainLayout

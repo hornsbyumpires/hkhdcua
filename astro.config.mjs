@@ -6,5 +6,5 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [tailwind(), mdx(), react(), image()],
+	integrations: [tailwind(), mdx(), react(), image({ serviceEntryPoint: "@astrojs/image/sharp" })],
 });
